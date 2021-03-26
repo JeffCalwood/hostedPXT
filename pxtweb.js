@@ -1,1 +1,267 @@
-var pxt;"undefined"==typeof navigator||!/Trident/i.test(navigator.userAgent)||/skipbrowsercheck=1/i.exec(window.location.href)||/\/browsers/i.exec(window.location.href)||(window.location.href="/browsers"),function(e){var n,o,t=[],i=!1,s=!1,a=!1,p=function(){function e(e){this.log=e,this.q=[],t.push(this)}return e.prototype.track=function(e,r,t){i?this.log(e,r,t):(this.q.push([e,r,t]),20<this.q.length&&this.q.shift())},e.prototype.flush=function(){for(;this.q.length;){var e=this.q.shift(),r=e[0],t=e[1],n=e[2];this.log(r,t,n)}},e}();function c(e){void 0===e&&(e=!1);var r=window.loadAppInsights;r&&(r(a=e,f),i=!0,t.forEach(function(e){return e.flush()}))}function f(e){var r=window.pxtConfig;if(void 0!==r&&r){var t=e.data.baseData;t.properties=t.properties||{},t.properties.target=r.targetId,t.properties.stage=(r.relprefix||"/--").replace(/[^a-z]/gi,""),"undefined"!=typeof Windows&&(t.properties.WindowsApp=1);var n=navigator.userAgent.toLowerCase(),o=/\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(n);o&&(t.properties.Electron=1,t.properties.ElectronVersion=o[1]);var i=window.pxtElectron;void 0!==i&&(t.properties.PxtElectron=1,t.properties.ElectronVersion=i.versions.electronVersion,t.properties.ChromiumVersion=i.versions.chromiumVersion,t.properties.NodeVersion=i.versions.nodeVersion,t.properties.PxtElectronVersion=i.versions.pxtElectronVersion,t.properties.PxtCoreVersion=i.versions.pxtCoreVersion,t.properties.PxtTargetVersion=i.versions.pxtTargetVersion,t.properties.PxtElectronIsProd=i.versions.isProd),t.properties.cookie=s&&a}}!function(l){var w;function t(){return Math.round(performance.now()-l.startTimeMs)}function h(e){var r=(e=Math.round(e))%1e3,t=Math.floor(e/1e3),n=t%60,o=Math.floor(t/60);return 0<o?o+"m"+n+"s":5<t?t+"s":0<t?t+"s"+r+"ms":e+"ms"}function e(e,r){void 0===r&&(r=t()),l.stats.milestones.push([e,r])}function r(){if(w=performance&&!!performance.mark&&!!performance.measure){performance.measure("measure from the start of navigation to now");var e=performance.getEntriesByType("measure")[0];l.startTimeMs=e.startTime}}l.stats={durations:[],milestones:[]},l.perfReportLogged=!1,l.splitMs=t,l.prettyStr=h,l.splitStr=function(){return h(t())},l.recordMilestone=e,l.init=r,l.measureStart=function(e){w&&performance.mark(e+" start")},l.measureEnd=function(e){if(w&&performance.getEntriesByName(e+" start").length){performance.mark(e+" end"),performance.measure(e+" elapsed",e+" start",e+" end");var r=performance.getEntriesByName(e+" elapsed","measure");if(r&&1===r.length){var t=r[0],n=t.duration;10<n&&l.stats.durations.push([e,t.startTime,n])}performance.clearMarks(e+" start"),performance.clearMarks(e+" end"),performance.clearMeasures(e+" elapsed")}},l.report=function(e){if(void 0===e&&(e=null),w){for(var r="performance report:\n",t=0,n=l.stats.milestones;t<n.length;t++){var o=n[t],i=o[0],s=o[1];(!e||0<=i.indexOf(e))&&(r+="\t\t"+i+" @ "+h(s)+"\n")}r+="\n";for(var a=0,p=l.stats.durations;a<p.length;a++){var c=p[a],f=(i=c[0],c[1]),d=c[2],u=e&&0<=i.indexOf(e);(50<d&&!e||u)&&(r+="\t\t"+i+" took ~ "+h(d),1e3<d&&(r+=" ("+h(f)+" - "+h(f+d)+")"),r+="\n")}console.log(r)}l.perfReportLogged=!0},r(),e("first JS running")}(e.perf||(e.perf={})),e.initAnalyticsAsync=function(){var e,r,t,n,o;(e=window.pxtConfig)&&!e.isStatic?(r="undefined"!=typeof window,t="undefined"!=typeof Windows,n=r&&!!window.pxtElectron,o=r&&!!window.ipcRenderer||/ipc=1/.test(location.hash)||/ipc=1/.test(location.search),t||n||o||function(){try{return window&&window.self!==window.top}catch(e){return!1}}()&&/nocookiebanner=1/i.test(window.location.href)?c(!0):/sandbox=1|#sandbox|#sandboxproject/i.test(window.location.href)||window.pxtSkipAnalyticsCookie?c(!1):c(!0)):c(!1)},e.aiTrackEvent=function(e,r,t){n||(n=new p(function(e,r,t){return window.appInsights.trackEvent(e,r,t)})),n.track(e,r,t)},e.aiTrackException=function(e,r,t){o||(o=new p(function(e,r,t){return window.appInsights.trackException(e,r,t)})),o.track(e,r,t)},e.initializeAppInsightsInternal=c,e.setInteractiveConsent=function(e){s=e}}(pxt||(pxt={}));
+// redirect for IE11 (unsupported)
+(function _() {
+    if (typeof navigator !== "undefined" && /Trident/i.test(navigator.userAgent)
+        && !/skipbrowsercheck=1/i.exec(window.location.href)
+        && !/\/browsers/i.exec(window.location.href)) {
+        window.location.href = "/browsers";
+        return;
+    }
+})();
+/// <reference path="../../pxtwinrt/winrtrefs.d.ts"/>
+var pxt;
+(function (pxt) {
+    var eventBufferSizeLimit = 20;
+    var queues = [];
+    var analyticsLoaded = false;
+    var interactiveConsent = false;
+    var isProduction = false;
+    var TelemetryQueue = /** @class */ (function () {
+        function TelemetryQueue(log) {
+            this.log = log;
+            this.q = [];
+            queues.push(this);
+        }
+        TelemetryQueue.prototype.track = function (a, b, c) {
+            if (analyticsLoaded) {
+                this.log(a, b, c);
+            }
+            else {
+                this.q.push([a, b, c]);
+                if (this.q.length > eventBufferSizeLimit)
+                    this.q.shift();
+            }
+        };
+        TelemetryQueue.prototype.flush = function () {
+            while (this.q.length) {
+                var _a = this.q.shift(), a = _a[0], b = _a[1], c = _a[2];
+                this.log(a, b, c);
+            }
+        };
+        return TelemetryQueue;
+    }());
+    var eventLogger;
+    var exceptionLogger;
+    // performance measuring, added here because this is amongst the first (typescript) code ever executed
+    var perf;
+    (function (perf) {
+        var enabled;
+        perf.stats = {
+            durations: [],
+            milestones: []
+        };
+        perf.perfReportLogged = false;
+        function splitMs() {
+            return Math.round(performance.now() - perf.startTimeMs);
+        }
+        perf.splitMs = splitMs;
+        function prettyStr(ms) {
+            ms = Math.round(ms);
+            var r_ms = ms % 1000;
+            var s = Math.floor(ms / 1000);
+            var r_s = s % 60;
+            var m = Math.floor(s / 60);
+            if (m > 0)
+                return m + "m" + r_s + "s";
+            else if (s > 5)
+                return s + "s";
+            else if (s > 0)
+                return s + "s" + r_ms + "ms";
+            else
+                return ms + "ms";
+        }
+        perf.prettyStr = prettyStr;
+        function splitStr() {
+            return prettyStr(splitMs());
+        }
+        perf.splitStr = splitStr;
+        function recordMilestone(msg, time) {
+            if (time === void 0) { time = splitMs(); }
+            perf.stats.milestones.push([msg, time]);
+        }
+        perf.recordMilestone = recordMilestone;
+        function init() {
+            enabled = performance && !!performance.mark && !!performance.measure;
+            if (enabled) {
+                performance.measure("measure from the start of navigation to now");
+                var navStartMeasure = performance.getEntriesByType("measure")[0];
+                perf.startTimeMs = navStartMeasure.startTime;
+            }
+        }
+        perf.init = init;
+        function measureStart(name) {
+            if (enabled)
+                performance.mark(name + " start");
+        }
+        perf.measureStart = measureStart;
+        function measureEnd(name) {
+            if (enabled && performance.getEntriesByName(name + " start").length) {
+                performance.mark(name + " end");
+                performance.measure(name + " elapsed", name + " start", name + " end");
+                var e = performance.getEntriesByName(name + " elapsed", "measure");
+                if (e && e.length === 1) {
+                    var measure = e[0];
+                    var durMs = measure.duration;
+                    if (durMs > 10) {
+                        perf.stats.durations.push([name, measure.startTime, durMs]);
+                    }
+                }
+                performance.clearMarks(name + " start");
+                performance.clearMarks(name + " end");
+                performance.clearMeasures(name + " elapsed");
+            }
+        }
+        perf.measureEnd = measureEnd;
+        function report(filter) {
+            if (filter === void 0) { filter = null; }
+            if (enabled) {
+                var report_1 = "performance report:\n";
+                for (var _i = 0, _a = perf.stats.milestones; _i < _a.length; _i++) {
+                    var _b = _a[_i], msg = _b[0], time = _b[1];
+                    if (!filter || msg.indexOf(filter) >= 0) {
+                        var pretty = prettyStr(time);
+                        report_1 += "\t\t" + msg + " @ " + pretty + "\n";
+                    }
+                }
+                report_1 += "\n";
+                for (var _c = 0, _d = perf.stats.durations; _c < _d.length; _c++) {
+                    var _e = _d[_c], msg = _e[0], start = _e[1], duration = _e[2];
+                    var filterIncl = filter && msg.indexOf(filter) >= 0;
+                    if ((duration > 50 && !filter) || filterIncl) {
+                        var pretty = prettyStr(duration);
+                        report_1 += "\t\t" + msg + " took ~ " + pretty;
+                        if (duration > 1000) {
+                            report_1 += " (" + prettyStr(start) + " - " + prettyStr(start + duration) + ")";
+                        }
+                        report_1 += "\n";
+                    }
+                }
+                console.log(report_1);
+            }
+            perf.perfReportLogged = true;
+        }
+        perf.report = report;
+        (function () {
+            init();
+            recordMilestone("first JS running");
+        })();
+    })(perf = pxt.perf || (pxt.perf = {}));
+    function initAnalyticsAsync() {
+        if (isNotHosted()) {
+            initializeAppInsightsInternal(false);
+            return;
+        }
+        if (isNativeApp() || shouldHideCookieBanner()) {
+            initializeAppInsightsInternal(true);
+            return;
+        }
+        if (isSandboxMode() || window.pxtSkipAnalyticsCookie) {
+            initializeAppInsightsInternal(false);
+            return;
+        }
+        initializeAppInsightsInternal(true);
+    }
+    pxt.initAnalyticsAsync = initAnalyticsAsync;
+    function aiTrackEvent(id, data, measures) {
+        if (!eventLogger) {
+            eventLogger = new TelemetryQueue(function (a, b, c) { return window.appInsights.trackEvent(a, b, c); });
+        }
+        eventLogger.track(id, data, measures);
+    }
+    pxt.aiTrackEvent = aiTrackEvent;
+    function aiTrackException(err, kind, props) {
+        if (!exceptionLogger) {
+            exceptionLogger = new TelemetryQueue(function (a, b, c) { return window.appInsights.trackException(a, b, c); });
+        }
+        exceptionLogger.track(err, kind, props);
+    }
+    pxt.aiTrackException = aiTrackException;
+    function initializeAppInsightsInternal(includeCookie) {
+        if (includeCookie === void 0) { includeCookie = false; }
+        // loadAppInsights is defined in docfiles/tracking.html
+        var loadAI = window.loadAppInsights;
+        if (loadAI) {
+            isProduction = includeCookie;
+            loadAI(includeCookie, telemetryInitializer);
+            analyticsLoaded = true;
+            queues.forEach(function (a) { return a.flush(); });
+        }
+    }
+    pxt.initializeAppInsightsInternal = initializeAppInsightsInternal;
+    function telemetryInitializer(envelope) {
+        var pxtConfig = window.pxtConfig;
+        if (typeof pxtConfig === "undefined" || !pxtConfig)
+            return;
+        var telemetryItem = envelope.data.baseData;
+        telemetryItem.properties = telemetryItem.properties || {};
+        telemetryItem.properties["target"] = pxtConfig.targetId;
+        telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '');
+        if (typeof Windows !== "undefined")
+            telemetryItem.properties["WindowsApp"] = 1;
+        var userAgent = navigator.userAgent.toLowerCase();
+        var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+        if (userAgentRegexResult) {
+            telemetryItem.properties["Electron"] = 1;
+            telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+        }
+        var pxtElectron = window.pxtElectron;
+        if (typeof pxtElectron !== "undefined") {
+            telemetryItem.properties["PxtElectron"] = 1;
+            telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+            telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+            telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+            telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+            telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+            telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+            telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+        }
+        // "cookie" does not actually correspond to whether or not we drop the cookie because we recently
+        // switched to immediately dropping it rather than waiting. Instead, we maintain the legacy behavior
+        // of only setting it to true for production sites where interactive consent has been obtained
+        // so that we don't break legacy queries
+        telemetryItem.properties["cookie"] = interactiveConsent && isProduction;
+    }
+    function setInteractiveConsent(enabled) {
+        interactiveConsent = enabled;
+    }
+    pxt.setInteractiveConsent = setInteractiveConsent;
+    /**
+     * Checks for winrt, pxt-electron and Code Connection
+     */
+    function isNativeApp() {
+        var hasWindow = typeof window !== "undefined";
+        var isUwp = typeof Windows !== "undefined";
+        var isPxtElectron = hasWindow && !!window.pxtElectron;
+        var isCC = hasWindow && !!window.ipcRenderer || /ipc=1/.test(location.hash) || /ipc=1/.test(location.search); // In WKWebview, ipcRenderer is injected later, so use the URL query
+        return isUwp || isPxtElectron || isCC;
+    }
+    /**
+     * Checks whether we should hide the cookie banner
+     */
+    function shouldHideCookieBanner() {
+        //We don't want a cookie notification when embedded in editor controllers, we'll use the url to determine that
+        var noCookieBanner = isIFrame() && /nocookiebanner=1/i.test(window.location.href);
+        return noCookieBanner;
+    }
+    function isIFrame() {
+        try {
+            return window && window.self !== window.top;
+        }
+        catch (e) {
+            return false;
+        }
+    }
+    function isNotHosted() {
+        // If local serve, config will not exist. If served statically, we check the flag in the config
+        var config = window.pxtConfig;
+        return !config || config.isStatic;
+    }
+    /**
+     * checks for sandbox
+     */
+    function isSandboxMode() {
+        //This is restricted set from pxt.shell.isSandBoxMode and specific to share page
+        //We don't want cookie notification in the share page
+        var sandbox = /sandbox=1|#sandbox|#sandboxproject/i.test(window.location.href);
+        return sandbox;
+    }
+})(pxt || (pxt = {}));

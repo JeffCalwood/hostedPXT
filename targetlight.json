@@ -286,7 +286,7 @@
     ],
     "versions": {
         "target": "1.6.8",
-        "pxt": "6.6.18"
+        "pxt": "6.8.38"
     },
     "blocksprj": {
         "id": "blocksprj",
