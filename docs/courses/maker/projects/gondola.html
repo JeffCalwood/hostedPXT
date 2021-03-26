@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/eZxoYGV4wBw/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/eZxoYGV4wBw/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="gondola-project">Gondola Project</h1><h2 id="description">Description</h2><p>Constructing this gondola is a fun way to put a continuous servo motor to work. Run twine between two sturdy objects, then create a vehicle to traverse the gap. Part of the challenge is to balance the weight of the battery pack so that the arm the gondola hangs from is perpendicular to the ground. Students can shift the weight off to one side, or they can be challenged by engineering other solutions (think of the off-set arms that ski lifts often employ). Inputs like sound, infrared signal, or light can get the gondola in motion and can trigger other outputs, like light and sound sequences.</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="eZxoYGV4wBw"
+                data-placeholder="https://img.youtube.com/vi/eZxoYGV4wBw/0.jpg">
+            </div>
+        </div>
+    </div>
+<h2 id="time-required">Time required</h2><table>
+<thead>
+<tr>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="ui image" src="/static/courses/maker/projects/common/1-5-to-2-0-hours.png" alt="1.5 to 2.0 hours on a 4 hour time scale" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+About 1.5 - 2 hours.</p>
+<h2 id="academic-tie-in-ideas">Academic tie-in ideas</h2><ul>
+<li><strong>Literature</strong>: Create a figure to represent a literary character to ride your gondola. Use pauses, changes in speed, lights, sound, and your narration to convey the character’s development and journey over time.</li>
+<li><strong>Math / Physics</strong>: Make gondolas with different diameter wheels; do you imagine some will travel faster than others? Why or why not? Explain your prediction, run tests, then explain your observed results.</li>
+</ul>
+<h2 id="materials">Materials</h2><p>See the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapter for more details on materials.</p>
+<ul>
+<li>Cardboard</li>
+<li>Cardboard cutter</li>
+<li>Twine or string</li>
+<li>Glue gun and glue sticks</li>
+<li>A protractor, drawing compass, or other circular items about 2-4 inches in diameter (two of different sizes)</li>
+<li>Continuous rotation servo motor</li>
+<li>Alligator clips to male connectors</li>
+</ul>
+<h2 id="making">Making</h2><h3 id="create-the-gondola-wheels">Create the Gondola wheels</h3><p>The gondola wheel will consist of two larger diameter cardboard circles that will act as guides. Sandwiched in-between will be a smaller wheel that will actually roll on the twine. Depending on the thickness of your twine and cardboard, you may need two small circles inside. The key is that that the larger circles be wide enough apart to not impair movement by grabbing onto the twine, but that they also not be so wide apart that there is a lot of play for the twine to wobble on.</p>
+<ol>
+<li>Either trace circular objects or use a drawing compass to make circles on your cardboard. The outer guide circles might be 2.5 inches while the inner circle is 2 inches in diameter.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making1.jpg" alt="Trace out the Gondola wheels" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making2.jpg" alt="Cut out the  Gondola wheels" loading="lazy"></p>
+<ol start="2">
+<li>Hot glue the three circles (or possibly four if you have two small inner ones) so that the larger ones sandwich the smaller, with everything centered.</li>
+</ol>
+<h3 id="create-the-arm-of-the-gondola">Create the arm of the Gondola</h3><ol start="3">
+<li>Cut out the hanging arm of your gondola. An arm that is a rectangle of 1” x 10” should work well. You’ll want it to have some rigidity, so either trace the arm and cut a second one to glue on later, or else have popsicle sticks to glue onto it, or do both.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making3.jpg" alt="Cut out your Gondola arm from cardboard" loading="lazy"></p>
+<h3 id="create-a-place-for-the-servo-motor-on-the-arm">Create a place for the Servo Motor on the arm</h3><ol start="4">
+<li>Before gluing the cardboard arms together, take your continuous rotation servo motor and trace its base about half an inch from one end of one cardboard arm. </li>
+<li>Using a craft knife, cut out the rectangle you have traced. Cut on or just outside the pencil lines so that you’re making an opening a bit bigger than the servo motor body. </li>
+<li>Don’t cut or trace the second hole yet. Instead, hot glue the two cardboard arms together. </li>
+<li>Cut the hole through the second cardboard arm using the first one as a guide. Waiting and cutting it this way helps ensure that the two openings are the same size and are aligned.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making4.jpg" alt="Cut a hole for the servo motor in the Gondola arm" loading="lazy"></p>
+<h3 id="attach-the-servo-motor">Attach the Servo Motor</h3><ol start="8">
+<li>Insert the servo motor wires through the hole, then fit the servo body into the hole.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making5.jpg" alt="Insert the servo motor into the arm of the Gondola - edge view" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making6.jpg" alt="Insert the servo motor into the arm of the Gondola - flat view" loading="lazy"></p>
+<ol start="9">
+<li>Wrap the servo motor with a layer of masking or painter’s tape. This will make extracting it from the glue at the end of the project easier.</li>
+<li>Apply hot glue to the back of the servo motor where it meets the cardboard. Avoid getting hot glue on the wires and on the servo body itself. Also avoid touching the tip of the hot glue gun to the wires. (If you accidentally melt the plastic wire housing, be safe and discard that servo motor).</li>
+</ol>
+<p>If you decide your cardboard arm may not be as stiff as you’d like, this is a good time to glue on a popsicle stick or two for added rigidity.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making7.jpg" alt="Popsicle sticks to reinforce Gondola arm" loading="lazy"></p>
+<h3 id="attach-the-servo-motor-arm-horn">Attach the Servo Motor Arm/Horn</h3><p>Many projects don’t require that you screw the servo motor horn into the servo, but the gondola will probably put enough strain on the horn that you want to secure it with a screw. Use the shorter screw that comes with your servo motor. It’s best to use the disk-shaped servo horn because it has the largest surface area for the hot glue.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making8.jpg" alt="Servo arm attached" loading="lazy"></p>
+<h3 id="attach-the-servo-to-the-gondola-wheel">Attach the Servo to the Gondola wheel</h3><p>Apply a ring of hot glue to the center of one side of the cardboard wheel. Avoid getting it in the very center since this will get glue in the screw head and may make it difficult to operate later.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making9.jpg" alt="Put glue on the Gondola wheel" loading="lazy"></p>
+<p>Attach the horn and servo to the wheel. If you aren’t using the circular horn, just make sure that the servo motor screw is centered on the wheel and that it doesn’t contact the glue.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making10.jpg" alt="Attach Gondola wheel to servo" loading="lazy"></p>
+<p>Connect your servo motor to the Circuit Playground Express with three alligator clips to male connector wires, and connect the clips to the <strong>GND</strong>, <strong>3.3V</strong>, and <strong>A1</strong> pins. This is a good juncture at which to code the Circuit Playground Express since it is easier to connect it to your device before you attach things further. Skip ahead to the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/projects/gondola#coding.html">Coding</a> section, or else continue here before coding. </p>
+<h3 id="attach-circuit-playground-express">Attach Circuit Playground Express</h3><p>Use a piece of looped tape to attach the Circuit Playground Express to the gondola arm. How you attach your battery pack will depend on the weight of the pack you’re using. It will need to be on the wheel side of the arm (not the side with the servo motor wires coming out). Try taping it onto the arm one way, then turn it perpendicular and tape it that way. Hang the wheel off your finger to test for balance. Does one battery orientation let the cardboard arm hang more vertically than the other?</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making11.jpg" alt="CPX attacthed to Gondola arm" loading="lazy"></p>
+<p>You can also fabricate gusset braces and a small shelf to further offset the battery’s weight if that will help balance.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making12.jpg" alt="Shelf and its brace glued to the Gondola arm" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making13.jpg" alt="Full Gondola arm with shelf" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/gondola/gondola-making14.jpg" alt="Battery pack sitting on the shelf" loading="lazy"></p>
+<p>Use tape to connect the battery pack and Circuit Playground Express to the gondola, and pins <strong>A1</strong> or <strong>A2</strong>, <strong>GND</strong>, and <strong>VOUT</strong> to the continuous servo.</p>
+<p>Now, code, test, and iterate!</p>
+<h2 id="coding">Coding</h2><p>See <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/coding.html">Coding the Circuit Playground Express</a> chapter for more information.</p>
+<p>This sample code first uses an <code>||loops:on start||</code> block and establishes what will constitute a “loud sound” by putting the threshold at <code>50</code>. Pick any value from 0-255 and experiment until you find the right one. When the <code>||input:on loud sound||</code> input happens, the code runs:</p>
+<ul>
+<li>First an animation plays for half a second.</li>
+<li>Then two magic wand sounds play.</li>
+<li>Followed by the ten lights turning green indicating that the Gondola is starting.</li>
+<li>At this point, the Gondola will move at <code>50</code> percent (%) speed in one direction for <code>10</code> seconds.</li>
+<li>Then it will stop, and the lights will turn red.</li>
+<li>Finally, it will return back to the starting point.</li>
+</ul>
+<pre><code class="lang-blocks">input.onLoudSound(function () {
+    light.showAnimation(light.theaterChaseAnimation,500)
+    music.magicWand.play()
+    music.magicWand.play()
+    light.setAll(0x00ff00)
+    servos.A1.run(50)
+    pause(10000)
+    light.setAll(0xff0000)
+    servos.A1.run(0)
+    pause(200)
+    light.setAll(0x00ff00)
+    servos.A1.run(-50)
+    pause(10000)
+})
+input.setLoudSoundThreshold(50)</code></pre>
+<h2 id="variations-and-challenges">Variations and Challenges</h2><ul>
+<li>Try making a gondola only out of items from the recycling bin. Can you replace the cardboard elements with found items? Be sure to keep the weight down though. </li>
+<li>Can you use two servo motors to power the gondola? A T-shaped cardboard arm might help you mount the two servos with wheels.</li>
+</ul>
+<pre><code class="lang-package">servo</code></pre>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

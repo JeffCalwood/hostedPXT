@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/KvW-YwoTUVk/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/KvW-YwoTUVk/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="circuit-playground-express-crown">Circuit Playground Express Crown</h1><h2 id="description">Description</h2><p>Making an interactive crown is a fun way to celebrate a birthday, Halloween, a cultural event, the hundredth day of school, or any other noteworthy occasion. The Circuit Playground Express makes a great centerpiece, and head movements can trigger sound and light reactions. In the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/projects/crown#variations-and-challenges.html">Variations and Challenges</a> section, you’ll also see ideas for turning the crown into a communication tool.</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="KvW-YwoTUVk"
+                data-placeholder="https://img.youtube.com/vi/KvW-YwoTUVk/0.jpg">
+            </div>
+        </div>
+    </div>
+<h2 id="time-required">Time Required</h2><table>
+<thead>
+<tr>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="ui image" src="/static/courses/maker/projects/common/1-5-hours.png" alt="1.5 hours on a 4 hour time scale" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+1.5 hours</p>
+<h2 id="academic-tie-in-ideas">Academic tie-in ideas</h2><ul>
+<li><strong>History</strong>: celebrate your individual family history and background by creating a culture crown.</li>
+<li><strong>Literature</strong>: represent a theme from a novel, like identity in society, or the hero’s journey in a symbolic crown.</li>
+<li><strong>Music</strong>: collaborate with several friends to perform a piece of music that is triggered by your synchronized head movements.</li>
+</ul>
+<h2 id="materials">Materials</h2><p>See the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapter for more details on materials.</p>
+<ul>
+<li>Cardboard or Poster Board </li>
+<li>Cardboard cutters or scissors </li>
+<li>Duct tape or packing tape </li>
+<li>Glue gun and hot glue to affix decorations </li>
+<li>Decorative items – colored paper, markers/pens, feathers, pipe cleaners, plastic utensils, old CD’s, pieces of fabric, jewels, glitter, etc. </li>
+</ul>
+<h2 id="making">Making</h2><ul>
+<li>Use piece of string, a piece of paper, or anything similar to find the circumference of your head at hat level. </li>
+<li>Transfer that length to your piece of cardboard or poster board, and use a straightedge to draw the main band of the crown 1-3 inches wide. </li>
+<li>Be sure to leave a couple of extra inches in circumference so that you can eventually tape the overlap to secure the crown.</li>
+<li>Either free-hand or using objects to trace, add to the profile of the crown. You can look online to find a <a target="_blank" rel="nofollow noopener" href="https://www.bing.com/images/search?q=crown+silhouette">silhouette</a> you like. </li>
+<li>Make sure to leave a space for mounting the Circuit Playground Express board.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making1.jpg" alt="Crown silloute trace on cardboard" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making2.png" alt="Crown silloute trace on cardboard" loading="lazy"></p>
+<ul>
+<li>Keep in mind that you’ll want to tape the battery pack to the inside of your crown, behind the Circuit Playground Express board, so allow an area of cardboard that is large and high enough for that.</li>
+<li>Cut out the crown.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making3.jpg" alt="Crown cutout of cardboard" loading="lazy"></p>
+<ul>
+<li>If you are using thick cardboard, try bending it every half inch or so, in order to help it conform to your head.</li>
+<li>Attach the Circuit Playground Express board to the front of your crown by looping a piece of tape to the back of the board.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making4.jpg" alt="Loop of tape stuck on back of board" loading="lazy"></p>
+<ul>
+<li>Attach the battery pack to the Circuit Playground Express, and tape the battery pack on the inside of the crown.</li>
+<li>Depending on where you mount the battery pack, you may need to cut a small hole so you can feed the battery pack’s wire through to the Circuit Playground Express.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making5.jpg" alt="Battery pack taped to the inside of the posterboard crown" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making6.jpg" alt="Battery pack taped to the inside of the cardboard crown" loading="lazy"></p>
+<ul>
+<li>Keep in mind that you’ll want access to the micro USB port on your Circuit Playground Express board in order to download and update your code, so don’t cover that part up.</li>
+<li>Plan the placement of your decorations.</li>
+<li>Hot glue your decorations on, and add drawings, glitter, pipe cleaners, or whatever else your crown needs.</li>
+<li>Keep in mind that when you form the crown in a circle, the glue may not hold long horizontal items, so you may want to use rubber bands or zip ties that anchor in a pair of holes in the crown.</li>
+<li>Form the crown into a circle and use tape to secure the two ends together. Double-check the fit before using a lot of tape.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making7.jpg" alt="Tape the ends of the crown together" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-making8.jpg" alt="Finished crown project" loading="lazy"></p>
+<h2 id="coding">Coding</h2><p>See <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/coding.html">Coding the Circuit Playground Express</a> for more information.</p>
+<p>Inputs like tilt up, down, left, and right are a perfect way to trigger different sound and light outputs for our crown. </p>
+<ol>
+<li>Open the <code>||loops:LOOPS||</code> Toolbox drawer.</li>
+<li>Drag an <code>||loops:on start||</code> block to the Workspace.</li>
+<li>Open the <code>||light:LIGHT||</code> Toolbox drawer .</li>
+<li>Drag a <code>||light:show ring||</code> block under the <code>||loops:on start||</code> block.</li>
+<li>Create a custom light design by picking different colors to show using the color wheel in the center of the <code>||light:show ring||</code> block, and then clicking on a round light in the outside edge.</li>
+</ol>
+<pre><code class="lang-blocks">light.showRing(
+`orange red white pink purple blue green yellow orange red`
+)</code></pre>
+<ol start="6">
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag two <code>||input:on shake||</code> blocks to the Workspace .</li>
+<li>In the <code>||input:on shake||</code> blocks, use the drop-down menu to select <code>Tilt Left</code> and <code>Tilt Right</code>.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-code2.png" alt="Gesture selections" loading="lazy"></p>
+<ol start="8">
+<li>Open the <code>||music:MUSIC||</code> Toolbox drawer.</li>
+<li>Drag 2 <code>||music:play sound||</code> blocks to the Workspace.</li>
+<li>Drop one in each of the <code>||input:on tilt||</code> blocks.</li>
+<li>In the <code>||music:play sound||</code> blocks, use the drop-down menu to select different sounds to play.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-code3.png" alt="Play sound selectons" loading="lazy"></p>
+<ol start="12">
+<li>Test in the Simulator by moving your mouse left and right over the board to simulate tilting left and right.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-code4.png" alt="Board tilt left and right" loading="lazy"></p>
+<ol start="13">
+<li>Optional – From the <code>||music:MUSIC||</code> Toolbox drawer, use the <code>||music:set volume||</code> block to make it louder. 
+Now let’s add some light animations! </li>
+<li>Open the <code>||light:LIGHT||</code> Toolbox drawer, and drag two <code>||light:show animation||</code> blocks to the Workspace.</li>
+<li>Drop one in each of the <code>||input:on tilt||</code> blocks.</li>
+<li>Using the first drop-down menu in the <code>||light:show animation||</code> blocks, select a different animation to show.</li>
+<li>Using the second drop-down menu in the <code>||light:show animation||</code> block, change the duration to 2 seconds (2000 milliseconds).</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-code5.png" alt="Animation time selections" loading="lazy"></p>
+<p>To reset our crown back to the original lights after we tilt it, let’s add some code for when we press button <strong>A</strong> on our Circuit Playground Express.</p>
+<ol start="18">
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag a <code>||input:button click||</code> block onto the Workspace.</li>
+<li>Right-click on the <code>||light:show ring||</code> block that is currently in our <code>||loops:on start||</code> block, and select <strong>Duplicate</strong>.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/crown/crown-code6.png" alt="Duplicate block selection in menu" loading="lazy"></p>
+<ol start="20">
+<li>Drag and drop the copy of our <code>||light:show ring||</code> block into the <code>||input:button click||</code> block </li>
+</ol>
+<p>Your final program should look similar to this:</p>
+<pre><code class="lang-blocks">input.buttonA.onEvent(ButtonEvent.Click, function () {
+    light.showRing(
+    `orange red white pink purple blue green yellow orange red`
+    )
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    music.powerUp.play()
+    light.showAnimation(light.rainbowAnimation, 500)
+})
+input.onGesture(Gesture.TiltRight, function () {
+    music.powerDown.play()
+    light.showAnimation(light.theaterChaseAnimation, 500)
+})
+light.showRing(
+`orange red white pink purple blue green yellow orange red`
+)</code></pre>
+<h3 id="variations-and-challenges">Variations and Challenges</h3><h4 id="create-infrared-communication-between-crowns">Create infrared communication between Crowns</h4><p>Different head tilts can send a friend’s crown different IR messages to trigger lights and sounds. Here’s an example of this:</p>
+<pre><code class="lang-blocks">network.onInfraredReceivedNumber(function (num) {
+    if (num == 1) {
+        music.siren.play()
+        light.showAnimation(light.sparkleAnimation, 2000)
+    } else {
+        music.magicWand.play()
+        light.showAnimation(light.rainbowAnimation, 2000)
+    }
+})
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    light.showRing(
+    `orange red white pink purple blue green yellow orange red`
+    )
+})
+input.onGesture(Gesture.TiltRight, function () {
+    network.infraredSendNumber(1)
+    music.powerDown.play()
+    light.showAnimation(light.theaterChaseAnimation, 500)
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    network.infraredSendNumber(2)
+    music.powerUp.play()
+    light.showAnimation(light.colorWipeAnimation, 500)
+})
+music.setVolume(256)
+light.showRing(
+`orange red white pink purple blue green yellow orange red`
+)</code></pre>
+<h4 id="build-empathy-and-teamwork">Build empathy and teamwork</h4><p>Take this communication challenge even further by having partners create their own navigation signals (maybe <code>power up</code> means go forward, <code>Middle C</code> means turn right, etc.). The guide partners are told a secret destination, and they must steer the other partner to it while walking behind and only using head tilt-triggered sounds. Great empathy-building activity. </p>
+<h4 id="incorporate-a-servo-motor">Incorporate a servo motor</h4><p>Cut an opening for a servo motor on your crown, or else glue it to the front. What will you make wag back and forth up there? For more information on using Servo motors, see the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/coding/servos.html">Coding</a> and <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapters.</p>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

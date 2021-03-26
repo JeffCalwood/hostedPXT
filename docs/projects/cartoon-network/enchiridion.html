@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/PezmgdB1kOE/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/PezmgdB1kOE/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="enchiridion">Enchiridion</h1><p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/at-banner.jpg" alt="Adventure Time bannner" loading="lazy"></p>
+<p><strong>The Enchiridion from <a target="_blank" rel="nofollow noopener" href="https://www.cartoonnetwork.com/video/adventure-time/">Adventure Time</a>!</strong></p>
+<p>The Enchiridion (which translates to “The Handbook” or “The Manual”) is an ancient book with codes of conduct, guidelines, and other helpful information for heroes. The book also has magical powers that are unlocked by inserting the royal gems into their appropriate slots on the front cover of the book. Create your own Enchiridion and try to collect all the gems!</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/enchiridion.jpg" alt="The Enchiridion cover" loading="lazy"></p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="PezmgdB1kOE"
+                data-placeholder="https://img.youtube.com/vi/PezmgdB1kOE/0.jpg">
+            </div>
+        </div>
+    </div>
+<p><br /></p>
+<h2 id="prepare">Prepare</h2><h3 id="this-project">This project</h3><p><strong>Level</strong>: Medium<br />
+<strong>Duration</strong>: 60 minutes<br />
+<strong>Flipgrid</strong>: <a target="_blank" rel="nofollow noopener" href="https://flipgrid.com/3a051ac5">https://flipgrid.com/3a051ac5</a></p>
+<h3 id="materials">Materials</h3><p>Collect the materials in the list before starting your project Make.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/materials.jpg" alt="Materials" loading="lazy"></p>
+<ul>
+<li><a target="_blank" rel="nofollow noopener" href="https://www.adafruit.com/product/3517">Adafruit Circuit Playground Express Base Kit</a></li>
+<li>Favorite hardcover book</li>
+<li>Brown grocery bag, or brown butcher paper</li>
+<li>Crayons, colored pencils, paint or colored markers</li>
+<li>Tape (clear, duct tape or packing tape will work)</li>
+<li>Scissors</li>
+</ul>
+<h2 id="make">Make</h2><h3 id="step-1-cover-the-book">Step 1: Cover the book</h3><p>If using a brown grocery bag, cut it along the side and cut out the bottom to open up as a flat piece of paper, and remove any handles.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make1.jpg" alt="Prepare the paper from the bag" loading="lazy"></p>
+<p>Use the brown bag or brown butcher paper to cover the outside cover of the book. To do this, mark the top and bottom edges of the book on the paper, then fold the paper to fit the height of the book.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make2.jpg" alt="Top and bottom of cover marked on the bag" loading="lazy"></p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make3.jpg" alt="Top and bottom edges folded" loading="lazy"></p>
+<p>Wrap the paper around the book and fold and tape the ends around the front and back cover flaps. Depending on the size of your book, you may need to trim the ends if they are too long.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make4.jpg" alt="Ends of the cover taped to top and bottom edge" loading="lazy"></p>
+<h3 id="step-2-position-and-attach-the-adafruit-circuit-playground-express">Step 2: Position and attach the Adafruit Circuit Playground Express</h3><p>Use a small piece of tape and roll it inside out to form a loop so that the sticky side is on the outside.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make5.jpg" alt="Loop of tape stuck to back of board" loading="lazy"></p>
+<p>Place the tape on the back of the Adafruit Circuit Playground Express and press the Adafruit Circuit Playground Express in the center of the front cover of the book. Make sure the battery pack port is at the bottom, and the USB port is at the top.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make6.jpg" alt="The board attached to the front cover of book" loading="lazy"></p>
+<h3 id="step-3-draw-the-book-cover-details">Step 3: Draw the book cover details</h3><p>Draw a bigger circle around the Adafruit Circuit Playground Express (you may want to use a cup or a roll of duct tape to trace the outline of the circle). Inside the circle, draw the 6 royal gems and color them in.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make7.jpg" alt="Draw gems around the board" loading="lazy"></p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make8.jpg" alt="&quot;Enchiridion&quot; written on the cover" loading="lazy"></p>
+<p>Draw a rectangle with curved corners around the whole thing. Then draw the sword, shields and any other details you would like, and color with colored pencils, crayons or markers.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make9.jpg" alt="Sword and shields drawn on the cover" loading="lazy"></p>
+<h3 id="step-4-insert-the-batteries-and-attach-battery-pack">Step 4: Insert the batteries and attach battery pack</h3><p>Insert the batteries into the battery pack.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make10.jpg" alt="3 batteries inserted into the battery pack" loading="lazy"></p>
+<p>Attach the wire from the battery pack to the Adafruit Circuit Playground Express.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make11.jpg" alt="Wire from the battery pack connected to the board" loading="lazy"></p>
+<p>Tape the battery pack onto the back of the book, being careful not to tape over the On/Off switch. If your battery pack includes a clip, you may want to remove that as well.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/make12.jpg" alt="The battery pack taped to the back of the book" loading="lazy"></p>
+<h3 id="complete-">Complete!</h3><p>Congratulations! You have made your own magical Enchiridion!</p>
+<p>Move on to the next step to code your Enchiridion.</p>
+<h2 id="code">Code</h2><p>Code a “Collect the Gems” game on your Enchiridion – where you have to press the button to match the right gems in their places.</p>
+<h3 id="concepts">Concepts</h3><ul>
+<li>Light</li>
+<li>Variables</li>
+<li>Booleans</li>
+<li>Conditionals</li>
+</ul>
+<h3 id="blocks">Blocks</h3><pre><code class="lang-cards">input.buttonA.onEvent(ButtonEvent.Click, function () {})
+if (true) {}
+let x = 0
+light.showRing(&quot;&quot;)
+light.pixelColor(0)
+music.magicWand.play()</code></pre>
+<h3 id="step-1-create-a-play-variable">Step 1: Create a Play variable</h3><p>The first thing we’ll want to do is to create a variable to let us know if we are playing the game or not. This variable will only have two values – True or False.</p>
+<ul>
+<li>Open <a target="_blank" rel="nofollow noopener" href="https://makecode.adafruit.com/">MakeCode</a> in your web browser </li>
+<li>Click on <strong>New Project</strong></li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/new-project.png" alt="New project button" loading="lazy"></p>
+<ul>
+<li>Name your Project as <strong>Enchiridion</strong> (note – you don’t need to click the <strong>Save</strong> button, just type the name)</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/project-name.png" alt="Project name box" loading="lazy"></p>
+<ul>
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag out an <code>||loops:on start||</code> block to the coding Workspace </li>
+<li>In the <code>||variables:VARIABLES||</code> Toolbox drawer, click on the <strong>Make a Variable</strong> button and name your variable<code>play</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code1.png" alt="Name the &#39;play&#39; variable" loading="lazy"></p>
+<p>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag out a <code>||variables:set||</code> variable block to the coding Workspace and drop it into the <code>||loops:on start||</code> block.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code2.png" alt="&#39;set&#39; variable block" loading="lazy"></p>
+<p>From the <code>||logic:LOGIC||</code> Toolbox drawer, under the <strong>Boolean</strong> subcategory, drag out a <code>||logic:true||</code> block and drop it into the <code>||variables:set||</code> block replacing the <code>0</code>.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code3.png" alt="&#39;true&#39; logic block" loading="lazy"></p>
+<h3 id="step-2-create-color-patterns">Step 2: Create color patterns</h3><p>To play the game, we’ll flash different color patterns onto the Adafruit Circuit Playground Express. One of these color patterns will match the magic gem colors on the Enchiridion.</p>
+<p>The first thing we need to do is check that we are still playing the game.</p>
+<ul>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag out an <code>||logic:if then||</code> block and drop into the <code>||loops:forever||</code> block.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code4.png" alt="&#39;if then&#39; logic block" loading="lazy"></p>
+<p>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag out a <code>||variables:play||</code> variable block to the coding Workspace and drop it into the <code>||logic:if then||</code> block replacing <code>true</code>.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code5.png" alt="&#39;play&#39; variable placed into &#39;if then&#39;" loading="lazy"></p>
+<ul>
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag out 3 <code>||light:show ring||</code> blocks and place them inside the <code>||logic:if then||</code> block.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code6.png" alt="&#39;play&#39; variable placed into &#39;if then&#39;" loading="lazy"></p>
+<ul>
+<li>In the <code>||light:show ring||</code> blocks, click on the color wheel to select different colors and then click on the outside ring lights to change the lights to different colors. The middle grey color in the wheel turns the lights off. </li>
+</ul>
+<pre><code class="lang-block">let play = 0
+forever(function () {
+    if (play) {
+        light.showRing(
+        `black green white black blue yellow red black pink purple`
+        )
+        light.showRing(
+        `red yellow orange black red white blue green red black`
+        )
+        light.showRing(
+        `yellow pink black green black black purple black green blue`
+        )
+    }
+})</code></pre>
+<ul>
+<li>For the last <code>||light:show ring||</code> block, copy the color pattern below – this matches the gem colors on the Enchiridion: <code>blue</code>, <code>green</code>, <code>off</code>, <code>purple</code>, <code>off</code>, <code>off</code>, <code>green</code>, <code>off</code>, <code>pink</code>, <code>yellow</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/enchiridion-ring.jpg" alt="Ring on the Enchiridion cover" loading="lazy"></p>
+<pre><code class="lang-block">light.showRing(
+        `yellow pink black green black black purple black green blue`
+        )</code></pre>
+<h3 id="step-3-check-for-the-matching-gem-colors">Step 3: Check for the matching gem colors</h3><p>When a player presses the <strong>A</strong> button, we want to check if the current colors match the gem colors on the Enchiridion. If they don’t match, we continue playing the game. But if they do match, then we’ll stop playing the game and play a sound.</p>
+<p>There are six gems on the Enchiridion, so we’ll need to check the colors in six different locations on the Adafruit Circuit Playground Express. The light locations go from 0 – 9 counter-clockwise:</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/cpx-pixels.png" alt="Pixel locations on the board" loading="lazy"></p>
+<ul>
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag out a <code>||input:on button click||</code> block onto the Workspace.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag out an <code>||logic:if then||</code> block and drop into the <code>||input:on button click||</code> block.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag out an equals <code>||logic:0 = 0||</code> comparison block, and drop into the <code>||logic:if then||</code> block replacing the default <code>true</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code8.png" alt="Comparison block placed into &#39;if then&#39; block" loading="lazy"></p>
+<ul>
+<li>In the <code>||light:LIGHT||</code> Toolbox drawer, scroll down to the <strong>More</strong> section and drag out a <code>||light:pixel color||</code> at block onto the Workspace, and drop it into the first slot of the <code>||logic:0 = 0||</code> comparison block replacing the <code>0</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code9.png" alt="&#39;pixel color&#39; placed into comparsion block" loading="lazy"></p>
+<ul>
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, in the <strong>Color</strong> section, drag out a <code>||light:color||</code> value block onto the Workspace and drop it into the second slot of the <code>||logic:0 = 0||</code> comparison block replacing the other <code>0</code>.</li>
+<li>In the <code>||light:color||</code> block, use the drop-down menu to select the <code>yellow</code> color.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code10.png" alt="Color choices for the &#39;color&#39; block" loading="lazy"></p>
+<p>Now, we need to do the same thing to check the colors on the other five locations.</p>
+<ul>
+<li>Right-click (or long-press) on the <code>||logic:if then||</code> block to see the context menu appear. Click on <strong>Duplicate</strong> to make a copy of this block.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code11.png" alt="Duplicate selection on block menu" loading="lazy"></p>
+<ul>
+<li>Drag this duplicated block inside the original <code>||logic:if then||</code> block.</li>
+<li>Do this 4 more times, so there are 6 total nested <code>||logic:if then||</code> blocks.</li>
+</ul>
+<pre><code class="lang-block">input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (light.pixelColor(0) == Colors.Yellow) {
+        if (light.pixelColor(0) == Colors.Yellow) {
+            if (light.pixelColor(0) == Colors.Yellow) {
+                if (light.pixelColor(0) == Colors.Yellow) {
+                    if (light.pixelColor(0) == Colors.Yellow) {
+                        if (light.pixelColor(0) == Colors.Yellow) {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+})</code></pre>
+<ul>
+<li>In each of the <code>||light:pixel color at||</code> blocks, change the location that you are checking, and in the <code>||light:color||</code> value block, use the drop-down menu to change the color that you’re checking:</li>
+</ul>
+<blockquote>
+<ul>
+<li>Location 0 = Yellow </li>
+<li>Location 1 = Pink </li>
+<li>Location 3 = Green </li>
+<li>Location 6 = Purple </li>
+<li>Location 8 = Green </li>
+<li>Location 9 = Blue</li>
+</ul>
+</blockquote>
+<h3 id="step-4-stop-playing-when-you-match-the-gem-colors">Step 4: Stop playing when you match the gem colors</h3><p>If all the colors match, then let’s stop play and also play a winning sound.</p>
+<ul>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag out a <code>||variables:set||</code> variable block onto the Workspace and drop inside the <code>||logic:if then||</code> blocks.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, under the <strong>Boolean</strong> subcategory, drag out a <code>||logic:false||</code> block and drop it into the <code>||variables:set||</code> block replacing the <code>0</code>.</li>
+</ul>
+<pre><code class="lang-block">let play = false
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (light.pixelColor(0) == Colors.Yellow) {
+        if (light.pixelColor(1) == Colors.Pink) {
+            if (light.pixelColor(3) == Colors.Green) {
+                if (light.pixelColor(6) == Colors.Purple) {
+                    if (light.pixelColor(8) == Colors.Green) {
+                        if (light.pixelColor(9) == Colors.Blue) {
+                            play = false
+                        }
+                    }
+                }
+            }
+        }
+    }
+})</code></pre>
+<ul>
+<li>From the <code>||music:MUSIC||</code> Toolbox drawer, drag out a <code>||music:play sound||</code> block onto the Workspace and drop inside the <code>||logic:if then||</code> blocks after the <code>||variables:set||</code> variable block.</li>
+<li>In the <code>||music:play sound||</code> block, use the drop-down menu to select the <code>magic wand</code> sound effect.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code14.png" alt="Sound effect selections" loading="lazy"></p>
+<h3 id="step-5-restart-the-game">Step 5: Restart the game</h3><ul>
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag out a <code>||input:on button click||</code> block onto the Workspace.</li>
+<li>In the <code>||input:on button click||</code> block, use the drop-down menu to select <code>Button B</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/code15.png" alt="Input button selections" loading="lazy"></p>
+<ul>
+<li>In the <code>||loops:on start||</code> block on the coding Workspace, right-click on the <code>||variables:set||</code> variable block and select <strong>Duplicate</strong> to make a copy of this block. </li>
+<li>Drag this new copy of the <code>||variables:set||</code> variable block into the <code>||input:on button B click||</code> block.</li>
+</ul>
+<pre><code class="lang-block">let play = false
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    play = true
+})</code></pre>
+<p>Your final program may look something like this:</p>
+<pre><code class="lang-blocks">let play = true
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    play = true
+})
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (light.pixelColor(0) == Colors.Yellow) {
+        if (light.pixelColor(1) == Colors.Pink) {
+            if (light.pixelColor(3) == Colors.Green) {
+                if (light.pixelColor(6) == Colors.Purple) {
+                    if (light.pixelColor(8) == Colors.Green) {
+                        if (light.pixelColor(9) == Colors.Blue) {
+                            play = false
+                            music.magicWand.play()
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+forever(function () {
+    if (play) {
+        light.showRing(
+            `black green white black blue yellow red black pink purple`
+        )
+        light.showRing(
+            `red yellow orange black red white blue green red black`
+        )
+        light.showRing(
+            `yellow pink black green black black purple black green blue`
+        )
+    }
+})</code></pre>
+<h3 id="step-6-test-and-download">Step 6: Test and Download</h3><p>Try playing the game in the Simulator – click on button <strong>A</strong> whenever the Enchiridion gem color pattern shows up. If you correctly match the gems, the animation should stop and a sound effect plays. When you press button <strong>B</strong>, play should resume. You can add more difficulty to the game by adding more <code>||light:show ring||</code> color patterns.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/simulator.gif" alt="Simulator" loading="lazy"></p>
+<p>Once you’re happy with your program, click the <strong>Download</strong> button and follow the instructions to download the code to your Adafruit Circuit Playground Express.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/enchiridion/download.png" alt="Download dialog" loading="lazy"></p>
+<p>Disconnect the Adafruit Circuit Playground Express from the USB cable, turn on the batteries, and try to collect all the gems and unleash the magical powers of the Enchiridion! </p>
+<p>Great work!</p>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

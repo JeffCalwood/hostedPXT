@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/calibrate-sensitivity-header.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/calibrate-sensitivity-header.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="calibration-and-sensitivity">Calibration and sensitivity</h1><p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/calibrate-sensitivity-header.jpg" alt="Touch pad and coin sensor" loading="lazy"></p>
+<h2 id="calibration">Calibration</h2><p>In order for a <code>||input:on touch||</code> event to detect a touch properly, the untouched pin’s <a  rel="nofollow noopener" href="#sense-value">sense value</a> is set as the touch <a  rel="nofollow noopener" href="#threshold">threshold</a> for the sensor connected to it. A <em>threshold</em> is a value, that when reached, will cause something to happen. Depending on what is connected to the pin, either nothing or some larger object, the pin will read sense value based on the amount of <a  rel="nofollow noopener" href="/hostedPXT/docs/learnsystem/pins-tutorial/devices/capacitors.html">capacitance</a> measured at the pin. This is, of course, a different value when the pin or sensor object is touched and untouched.</p>
+<p>To properly detect a touch, the sense level the untouched case must be known. A sense level for a touch will be somewhat greater than the untouched level. When a program is started, the pins set for touch events are calibrated for the untouched sense levels. This is brief process where the pin input is read several times to find a reasonable value of sense level for when the pin, or something connected to it is untouched.</p>
+<p>Calibration automatically sets a threshold (the minimum sense value) for what is considered as a touch. You may need to recalibrate your touch input if there is a change of sensor or in the environment. If you connect a different sensor object to a pin without restarting your program, your touch event may indicate a touch when there isn’t one or it may never detect a touch at all. Also, if the temperature or humidity changes significantly, the electrical characteristics of a sensor might change. You may observe over time that it might detect a touch before your finger reaches it, being too sensitive, or that you have to press on the object more firmly, for a longer time before the touch is detected.</p>
+<p>If you change the sensor object or find that it doesn’t sense a touch as it did before, you can recalibrate.</p>
+<pre><code class="lang-block">input.touchA1.calibrate()</code></pre>
+<h3 id="experiment-change-sensors">Experiment: Change sensors</h3><p>If a pin is calibrated to one sensor it may not sense properly if a different sensor is connected later. The pin needs calibration to match the new sensor or it may indicate a touch even though it’s not touched.</p>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Connect one end of an alligator clip lead to a large coin and leave the other lead unclipped.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/calibrate-sensor.jpg" alt="Coin used as a sensor clipped to lead" loading="lazy"></p>
+<ol start="2">
+<li>Copy the following code into the editor and download it to your board.</li>
+</ol>
+<pre><code class="lang-blocks">input.touchA4.onEvent(ButtonEvent.Down, function () {
+    light.setAll(0x00ff00)
+    music.playTone(494, music.beat(BeatFraction.Half))
+})
+input.touchA4.onEvent(ButtonEvent.Up, function () {
+    light.clear()
+})
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    input.touchA4.calibrate()
+})</code></pre>
+<p><strong>Test</strong>: Touch pin <strong>A4</strong> and then lift your finger. Connect the other alligator clip lead to pin <strong>A4</strong>. Try touching and untouching the coin. Press button <strong>A</strong> to calibrate and touch the coin again.</p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/calibrate.gif" alt="Calibrating for a new sensor" loading="lazy"></p>
+<p><strong>Result</strong>: The LED pixels will light green when the pin is touched. When the coin is attached to the pin, the pixel light green and stay on even when you lift your finger. After calibration, the  LEDs go on when you touch the coin and off when you untouch the coin.</p>
+<h2 id="sensitivity">Sensitivity</h2><h3 id="threshold">Threshold </h3><p>As mentioned earlier, calibration sets the threshold for the range of sense values that mean a touch occurred. If you want to control the sensitivity of your touch sensor instead of using calibration to do it, you can set your own threshold to trigger touch events:</p>
+<pre><code class="lang-block">input.touchA4.setThreshold(400)</code></pre>
+<p>Touch pins return sense reading values between <code>0</code> and <code>1023</code>. Setting the threshold to a lower value makes the sensor object more sensitive (a touch is detected more quickly and further away) and higher values make it less sensitive. </p>
+<h3 id="experiment-sensitivity-tester">Experiment: Sensitivity tester</h3><hr>
+<p>Touch events in your programs happen when pin sense values reach the threshold value set for the pin. You can adjust the touch threshold to cause input events to happen when the sensor is either pressed firmly or if your finger is nearby, or maybe just coming close to touching the sensor. Increasing the threshold will cause the sensor to need a firm press to create the event while lowering the threshold triggers an event when the sensor is pressed lightly or just when your finger is very close.</p>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Connect a coin or other small conductive object to pin <strong>A4</strong> with an alligator clip lead.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/sensitivity-test.jpg" alt="Connect a sensor object to pin A4" loading="lazy"></p>
+<ol start="2">
+<li>Copy the following code into the editor and download it to your board.</li>
+</ol>
+<pre><code class="lang-blocks">let touched = false
+input.touchA4.onEvent(ButtonEvent.Down, function () {
+    touched = true
+    light.setAll(0x00ff00)
+})
+input.touchA4.onEvent(ButtonEvent.Up, function () {
+    touched = false
+})
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (sensitivity &lt; 1000) {
+        sensitivity += 100
+    } else {
+        light.setAll(0xff0000)
+    }
+    input.touchA4.setThreshold(sensitivity)
+})
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    if (sensitivity &gt; 100) {
+        sensitivity += -100
+    } else {
+        light.setAll(0xff0000)
+    }
+    input.touchA4.setThreshold(sensitivity)
+})
+let sensitivity = 10
+input.touchA4.setThreshold(10)
+forever(function () {
+    if (!touched) {
+        light.graph(1000 - sensitivity, 1000)
+    }
+    pause(500)
+})</code></pre>
+<p><strong>Test</strong>: Use the sensitivity meter to find the touch threshold for a sensor. Adjust the input threshold until the green pixels light showing a touch. Reduce the threshold until the green pixels go off. Button <strong>A</strong> increases sensitivity and button <strong>B</strong> decreases sensitivity. Touch the sensor to see if the pixels light green.</p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/sensitivity-meter.gif" alt="Sensitivity meter test" loading="lazy"></p>
+<p><strong>Result</strong>: The pixels will only light green when you touch the sensor. The threshold is adjusted to not create a touch input event until you actually touch the sensor.</p>
+<h3 id="sense-value">Sense value </h3><p>There’s always an input reading from a touch pin. This reading is a sense value related to the capacitance measured at the pin. When and object enters the <a  rel="nofollow noopener" href="/hostedPXT/docs/learnsystem/pins-tutorial/devices/capacitors#electric-field.html">electric field</a> present for the sensor connected to the pin, the sense value will change. You can read this sense value directly to know how much a sensor is influenced by an object coming near it.</p>
+<pre><code class="lang-block">let sense = input.touchA2.value()</code></pre>
+<p>The sense values range from <code>0</code> to <code>1023</code> where <code>0</code> means nothing is affecting the electric field at the pin and <code>1023</code> means that the field is greatly affected by some additional object.</p>
+<p>Using the sense value lets you control how you want to respond to what’s happening at your sensor. The <code>||input:on touch||</code> events are set to occur only when the sense value reaches the calibrated threshold or it reaches a threshold you have set. By reading the sense value though, you can detect and observe the proximity of an object near your sensor.</p>
+<h3 id="hover-pad">Experiment: Hover pad </h3><hr>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Cut out a rectangle about the size of your hand from a piece of cardboard.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/hover-pad-cardboard.jpg" alt="Cardboard rectangles for hover pad" loading="lazy"></p>
+<ol start="2">
+<li>Place it on some aluminum foil and cut the foil slightly larger than the cardboard rectangle.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/hover-pad-foil.jpg" alt="Cut out foil for hover pad" loading="lazy"></p>
+<ol start="3">
+<li>Fold the edges of the aluminum foil around the cardboard and tape them to uncovered side of the cardboard.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/hover-pad-taped.jpg" alt="Tape the foil to the cardboard" loading="lazy"></p>
+<ol start="4">
+<li>Connect an alligator clip lead to edge of the pad. Connect the other end of the lead to pin <strong>A3</strong>.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/hover-pad-connect.jpg" alt="Hover pad connected to board" loading="lazy"></p>
+<ol start="5">
+<li>Copy the following code into the editor and download it to your board.</li>
+</ol>
+<pre><code class="lang-blocks">let offset = 51
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (offset &gt; 50) {
+        offset += -50
+    }
+})
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    if (offset &lt; 971) {
+        offset += 50
+    }
+})
+forever(function () {
+    light.graph(input.touchA3.value() - offset, 1023 - offset)
+    pause(200)
+})</code></pre>
+<p><strong>Test</strong>: Move your hand close to the pad. Move it over and away from the pad. Also, try placing your hand close to the pad and then slowly pull it away. Adjust the sensitivity of the pad until your hand is detected at a short distance from it. Pressing button <strong>A</strong> increases sensitivity and pressing button <strong>B</strong> reduces sensitivity. </p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/hover-pad.gif" alt="Hand moving over the hover pad" loading="lazy"></p>
+<p><strong>Result</strong>: The pixel graph on the board will show more pixels when you’re close to the pad. The pixel graph will show less pixels when you move away.</p>
+<h3 id="experiment-gesture-sensor">Experiment: Gesture sensor</h3><hr>
+<p>Sometimes multiple sensors or are used to generate one input action. This is case when detecting the direction of motion with a hand or finger swipe.</p>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Make a second hover pad just like the one in the previous <a  rel="nofollow noopener" href="#hover-pad">Hover pad</a> experiment.</li>
+<li>Connect an alligator clip lead to one hover pad.</li>
+<li>Connect the other end of the alligator lead to pin <strong>A3</strong>.</li>
+<li>Connect an another alligator clip lead to the second hover pad.</li>
+<li>Connect the other end of that alligator lead to pin <strong>A4</strong>.</li>
+<li>Place the two hover pads next to each other with a small gap in between (1/4 inch or 7mm).</li>
+<li>Make the pad connected to pin <strong>A3</strong> be on the left and the pad connected to <strong>A4</strong> be on the right.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/swipe-sensor.jpg" alt="Hand swipe sensor with two hover pads" loading="lazy"></p>
+<ol start="8">
+<li>Copy the following code into the editor and download it to your board.</li>
+</ol>
+<pre><code class="lang-blocks">input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (offset &gt; 50) {
+        offset += -50
+    }
+})
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    if (offset &lt; 971) {
+        offset += 50
+    }
+})
+let offset = 0
+offset = 1001
+forever(function () {
+    if (input.touchA3.value() &gt; offset) {
+        light.showRing(
+            `red red red red red black black black black black`
+        )
+    } else if (input.touchA4.value() &gt; offset) {
+        light.showRing(
+            `black black black black black green green green green green`
+        )
+    } else {
+        light.clear()
+    }
+    pause(200)
+})</code></pre>
+<p><strong>Test</strong>: Place your hand over one of the hover pads. Lift and lower your hand to observe the pixels turn on and off. Adjust the sensitivity of the pads until your hand is detected at a short distance from them. Pressing button <strong>A</strong> increases sensitivity and pressing button <strong>B</strong> reduces sensitivity. Move your hand right-to-left and left-to-right across the pads.</p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity/gesture-sensor.gif" alt="Two hover pads for a swipe sensor" loading="lazy"></p>
+<p><strong>Result</strong>: Red pixels will light in the direction of your hand motion when you move right-to-left. Green pixels will light when you move your hand left-to-right.</p>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

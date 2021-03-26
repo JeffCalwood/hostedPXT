@@ -1,0 +1,77 @@
+CACHE MANIFEST
+
+CACHE:
+/hostedPXT/semantic.js
+/hostedPXT/main.js
+/hostedPXT/pxtapp.js
+/hostedPXT/typescript.js
+/hostedPXT/marked/marked.min.js
+/hostedPXT/highlight.js/highlight.pack.js
+/hostedPXT/jquery.js
+/hostedPXT/pxtlib.js
+/hostedPXT/pxtcompiler.js
+/hostedPXT/pxtpy.js
+/hostedPXT/pxtblockly.js
+/hostedPXT/pxtwinrt.js
+/hostedPXT/pxteditor.js
+/hostedPXT/pxtsim.js
+/hostedPXT/pxtembed.js
+/hostedPXT/pxtworker.js
+/hostedPXT/pxtweb.js
+/hostedPXT/blockly.css
+/hostedPXT/semantic.css
+/hostedPXT/rtlsemantic.css
+
+
+/hostedPXT/editor.js
+/hostedPXT/fieldeditors.js
+
+# blockly
+/hostedPXT/blockly/media/sprites.png
+/hostedPXT/blockly/media/click.mp3
+/hostedPXT/blockly/media/disconnect.wav
+/hostedPXT/blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/hostedPXT/vs/loader.js
+/hostedPXT/vs/base/worker/workerMain.js
+/hostedPXT/vs/basic-languages/bat/bat.js
+/hostedPXT/vs/basic-languages/cpp/cpp.js
+/hostedPXT/vs/basic-languages/python/python.js
+/hostedPXT/vs/basic-languages/markdown/markdown.js
+/hostedPXT/vs/editor/editor.main.css
+/hostedPXT/vs/editor/editor.main.js
+/hostedPXT/vs/editor/editor.main.nls.js
+/hostedPXT/vs/language/json/jsonMode.js
+/hostedPXT/vs/language/json/jsonWorker.js
+
+# charts
+/hostedPXT/smoothie/smoothie_compressed.js
+/hostedPXT/images/Bars_black.gif
+
+# gifjs
+/hostedPXT/gifjs/gif.js
+
+# ai
+/hostedPXT/ai.0.js
+
+/hostedPXT/worker.js
+/hostedPXT/monacoworker.js
+
+# ver Fri Mar 26 2021 09:53:32 GMT-0400 (Eastern Daylight Time)
+
+# target
+/hostedPXT/docs\static\logo.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\icons\android-chrome-192x192.png
+/hostedPXT/docs\static\icons\android-chrome-192x192.png
+/hostedPXT/docs\static\Microsoft-logo_rgb_c-gray-square.png
+/hostedPXT/docs\static\Microsoft-logo_rgb_c-white.png
+/hostedPXT/docs\static\getting-started\CN-banner.jpg
+
+/hostedPXT/target.js
+
+NETWORK:
+*

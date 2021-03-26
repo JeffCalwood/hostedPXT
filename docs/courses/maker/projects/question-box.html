@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/IcfwETgB5cM/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/IcfwETgB5cM/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="question-box-project">Question Box Project</h1><h2 id="description">Description</h2><p>This fun project takes inspiration from Jack-in-the-Box type toys and games. The lid of this box pops up when the correct copper tape touch input is pressed. Quiz your friends on a topic, then associate lights and sounds with different answers. Making the servo lever raise the lid presents a great chance to solve a mechanical engineering challenge. Bling up the interior with reflective material to add to the lights’ effect.</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="IcfwETgB5cM"
+                data-placeholder="https://img.youtube.com/vi/IcfwETgB5cM/0.jpg">
+            </div>
+        </div>
+    </div>
+<h2 id="time-required">Time Required</h2><table>
+<thead>
+<tr>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="ui image" src="/static/courses/maker/projects/common/1-to-2-hours.png" alt="1 to 2 hours on a 4 hour time scale" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+Approximately 2 hours.</p>
+<h2 id="academic-tie-in-ideas">Academic Tie-in Ideas</h2><ul>
+<li><strong>Any Subject</strong>: create quiz questions for any subject of study! Students can create question boxes for their peers in another class. Likewise, students could quiz parents at an open house or other event.</li>
+</ul>
+<h2 id="materials">Materials</h2><p>See the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapter for more details on materials.</p>
+<ul>
+<li>Cardboard box – square cube at least 2.5 inches on a side works best</li>
+<li>Flat cardboard for the base</li>
+<li>Popsicle stick</li>
+<li>Glue gun and glue sticks</li>
+<li>Cardboard cutter, craft pen knife or scissors</li>
+<li>Paper clip or wire</li>
+<li>Masking tape</li>
+<li>Copper tape</li>
+<li>180-degree servo motor</li>
+<li>Male to alligator clip connectors</li>
+<li>Drill</li>
+<li>Wire cutter</li>
+<li>Pencil and ruler</li>
+<li>Decorative materials – colored pens/markers, glitter, colored paper, stickers, feathers, googly eyes, etc. </li>
+<li>Light diffuser materials – aluminum foil, crinkled clear plastic, or tissue paper for the inside of the box</li>
+</ul>
+<h2 id="making">Making</h2><h3 id="plan-your-box">Plan your box</h3><ul>
+<li>Use a pre-made box if you can, for example <a target="_blank" rel="nofollow noopener" href="https://www.amazon.com/dp/B01N8YTJ70">https://www.amazon.com/dp/B01N8YTJ70</a>.</li>
+<li>Otherwise, you can cut a box out from a flat piece of cardboard (just like in the picture here).</li>
+<li>The height needs to be at least 2.5 inches to accommodate the alligator clips.</li>
+<li>You can also use a rectangular shoebox with an attached lid.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making0.jpg" alt="Plan the sides of the box on one piece of cardboard" loading="lazy"></p>
+<h3 id="position-the-box">Position the box</h3><ul>
+<li>Position the box where you will want it on a flat piece of cardboard.</li>
+<li>Allow room in front of the box for the copper tape strips and any writing or images you will want.</li>
+<li>Allow room in the back of the box for an object that the servo motor will sit on.</li>
+<li>Consider whether you will need a spot for the battery pack as well.</li>
+<li>Trace the outline of the box in pencil on the cardboard base.</li>
+<li>Apply hot glue on the inside of the pencil tracing so you can position and glue down the box.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making1.jpg" alt="Position the box on the base" loading="lazy"></p>
+<h3 id="cut-holes-in-the-box">Cut holes in the box</h3><ul>
+<li>Use an Xacto pen knife, or sharp scissors.</li>
+<li>Cut 3 holes in the back of the box for the Male to Alligator clip wires.</li>
+<li>Cut 4 holes in the front of the box for the Copper Tape.</li>
+<li>Cut 1 hole in the side for the micro USB cable.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making2.jpg" alt="Back holes for the servo motor wires, and side hole for the micro USB cable" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making3.jpg" alt="Front holes for copper tape" loading="lazy"></p>
+<h3 id="insert-circuit-playground-express-board-into-the-box">Insert Circuit Playground Express board into the box</h3><ul>
+<li>Don’t stick this down onto the box yet, as you will be still working with it.</li>
+<li>Thread the micro USB cable through the hole in the side of the box and attach to the Circuit Playground Express.</li>
+<li>You can also attach a battery pack to the Circuit Playground Express and insert into the box if you wish, or you can just run off the computer power from the USB cable.</li>
+</ul>
+<h3 id="attach-copper-tape">Attach Copper Tape</h3><ul>
+<li>Leaving the copper tape’s backing on, insert a strip in one of the openings.</li>
+<li>Remove only the last quarter inch or so of backing and stick it to one of the CPX pins that you plan to program. </li>
+<li>Remember, the capacitive pins are <strong>A1</strong> – <strong>A7</strong> on the Circuit Playground Express.</li>
+<li>Take care that the copper tape doesn’t touch any other pin or any other piece of copper tape.</li>
+<li>Trim the end, then repeat for all openings.</li>
+<li>Add the question and answer choices to the front part of the base.</li>
+<li>Unpeel a short section of copper tape backing and stick the tape down near the answers.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making4.jpg" alt="Thread copper tape through holes in the front of the box" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making5.jpg" alt="Copper tape attached to Circuit Playground pins" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making6.jpg" alt="Display question and answers on the front" loading="lazy"></p>
+<h3 id="attach-servo-motor-wires">Attach Servo motor wires</h3><ul>
+<li>Connect the alligator clips to the <strong>GND</strong>, <strong>VOUT</strong>, and <strong>A1</strong> Pin on the Circuit Playground Express.</li>
+<li>Thread the wires out through the holes in the back of the box.</li>
+<li>Connect the male ends of the wires into the servo motor connector wires.</li>
+<li>You will want to make sure you are connecting the correct wires:<blockquote>
+<ul>
+<li>Brown = Ground (<strong>GND</strong>)</li>
+<li>Red = Power (<strong>VOUT</strong>) </li>
+<li>Orange = Signal/Data (Pin <strong>A1</strong>)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/servo-connection.jpg" alt="Connect the Servo Motor wires to the correct connectors on the Circuit Playground Express" loading="lazy"></p>
+<h3 id="build-the-lever-to-lift-the-box-lid">Build the lever to lift the box lid</h3><ul>
+<li>Drill a hole in the end of a popsicle stick. Take care to apply almost no pressure as you drill so that the wood doesn’t split.</li>
+<li>Hot glue the arm section of the servo horn to the other end of the popsicle stick.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making7.jpg" alt="Glue servo horn to one end of the popsicle stick" loading="lazy"></p>
+<h3 id="build-the-stand-for-the-servo-motor">Build the stand for the Servo Motor</h3><ul>
+<li>Either build another box or find other materials to place the servo on behind the box.</li>
+<li>The servo needs to be about ¾ of an inch higher than the box lid.</li>
+<li>Do not glue the servo stand down yet. </li>
+<li>Apply masking tape to the bottom of the servo and hot glue the servo to the box stand, making sure the horn will be able to travel back and forth freely.</li>
+<li>Insert the servo horn on the stick and rotate it so that the maximum angle is pointing in the direction towards the box lid and the popsicle stick is pushing slightly into the box lid. It should hit about the middle of the lid.</li>
+<li>Once the servo stand is positioned correctly, trace the bottom with a pencil and use the tracing as a guide to hot glue the servo stand down.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making8.jpg" alt="Build a servo stand behind the box and position servo arm and popsicle stick" loading="lazy"></p>
+<h3 id="attach-the-popsicle-stick-to-the-box-lid">Attach the popsicle stick to the box lid</h3><ul>
+<li>Cut a section of wire or use a paperclip and thread it through the hole at the end of the popsicle stick.</li>
+<li>Bend the wire so that the ends are parallel to the edge of the box lid.</li>
+<li>Use some tape to affix the wire to the edge of the box lid. The taped ends should be as near the box lip as possible. </li>
+<li>After connecting, gently rotate the servo arm back to test the hinging action of the wire.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making9.jpg" alt="Using a piece of wire, attach the end of the popsicle stick to the box lid" loading="lazy"></p>
+<h3 id="decorate-your-box">Decorate your Box</h3><ul>
+<li>Use colored pens or markers or other decorative items to decorate your box.</li>
+<li>Print out your quiz question and possible answers on pieces of paper, and tape down to the base in front of the box – assigning one answer to each strip of copper tape.</li>
+<li>Use aluminum foil, crinkled clear plastic, tissue paper or other stuffing material to the inside of the box to diffuse and enhance the CPX light display.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-making10.jpg" alt="Use light diffusing material on the inside of the box" loading="lazy"></p>
+<h2 id="coding">Coding</h2><p>See <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/coding.html">Coding the Circuit Playground Express</a> for more information.</p>
+<p>In our example, the copper tape is connected to the Circuit Playground Express pins <strong>A4</strong>, <strong>A5</strong>, <strong>A6</strong>, and <strong>A7</strong>. So, we’ll need to code responses each time the copper tape connected to one of these capacitive pins is touched.</p>
+<ol>
+<li>From the Input Toolbox drawer, drag out four <code>||input:on button click||</code> blocks onto the Workspace.</li>
+<li>Using the drop-down menu in each of the <code>||input:on button click||</code> blocks, change the value from <code>button A</code> to:</li>
+</ol>
+<ul>
+<li>Pin <strong>A4</strong></li>
+<li>Pin <strong>A5</strong></li>
+<li>Pin <strong>A6</strong></li>
+<li>Pin <strong>A7</strong></li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/qb-code1.png" alt="Pin choices for on click blocks" loading="lazy"></p>
+<p>In our example, the response for Pin <strong>A6</strong> is the only correct answer, so let’s code incorrect responses for Pins <strong>A4</strong>, <strong>A5</strong>, and <strong>A7</strong>.</p>
+<ol start="3">
+<li>From the <code>||music:MUSIC||</code> Toolbox drawer, drag out three <code>||music:play sound||</code> blocks and drop them into the <code>||input:on pin click||</code> blocks for Pins <strong>A4</strong>, <strong>A5</strong>, and <strong>A7</strong>.</li>
+<li>In the <code>||music:play sound||</code> blocks, use the drop-down menu to select the <code>wawawawaa</code> sound effect.</li>
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag out three <code>||light:set all pixels||</code> blocks and drop them into the  <code>||input:on pin click||</code> blocks for Pins <strong>A4</strong>, <strong>A5</strong>, and <strong>A7</strong>.</li>
+</ol>
+<p>Code for wrong answers:</p>
+<pre><code class="lang-blocks">input.pinA4.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+input.pinA5.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+// This is the correct answer
+input.pinA6.onEvent(ButtonEvent.Click, function () {
+
+})
+input.pinA7.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})</code></pre>
+<p>If someone touches the correct answer for Pin <strong>A6</strong>, we want to reward them with some fun sounds and animations, as well as open the box!</p>
+<ol start="6">
+<li>From the <code>||music:MUSIC||</code> Toolbox drawer, drag out two <code>||music:play sound||</code> blocks and drop them into the <code>||input:on pin click||</code> block for Pin <strong>A6</strong>.</li>
+<li>In the <code>||music:play sound||</code> blocks, use the drop-down menu to select <code>magic wand</code> and <code>power up</code> sound effects.</li>
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag out two <code>||light:show animation||</code> blocks and drop them into the <code>||input:on pin click||</code> block for Pin <strong>A6</strong>, one on each side of the two <code>||music:play sound||</code> blocks.</li>
+<li>In the Show Animation blocks, use the drop-down menus to select <code>sparkle</code> and <code>rainbow</code> animations, and set the duration to 2 seconds (<code>2000</code> ms).</li>
+</ol>
+<p>To activate the servo motor, we’ll use some special servo motor blocks in our code. </p>
+<ol start="10">
+<li>In the Toolbox, click on the <strong>Advanced</strong> tab to display more Toolbox categories.</li>
+<li>Click on <strong>Extensions</strong> at the bottom of the Toolbox.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/advanced-toolbox.png" alt="Advanced toolbox categories" loading="lazy"></p>
+<ol start="12">
+<li>In the <strong>Extensions</strong> page, click on the <strong>Servo</strong> library.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/extensions.png" alt="Extenstions dialog" loading="lazy"></p>
+<ol start="13">
+<li>This will add a new <code>||servos:SERVOS||</code> category to the Toolbox.</li>
+</ol>
+<p><img class="ui image" src="/static/courses/maker/projects/question-box/servo-blocks.png" alt="Servo blocks toolbox drawer" loading="lazy"></p>
+<ol start="14">
+<li>From the <code>||servos:SERVOS||</code> Toolbox drawer, drag out a <code>||servos:set servo||</code> block onto the Workspace and drop it into the <code>||input:on pin click||</code> block for Pin <strong>A6</strong>. This will move the servo motor that is connected to the Circuit Playground on Pin <strong>A1</strong> by <code>90</code> degrees, thereby opening the lid of the box.</li>
+</ol>
+<pre><code class="lang-blocks">input.pinA4.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+input.pinA5.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+// This is the correct answer
+input.pinA6.onEvent(ButtonEvent.Click, function () {
+    music.magicWand.play()
+    light.showAnimation(light.sparkleAnimation,2000)
+    music.powerUp.play()
+    light.showAnimation(light.rainbowAnimation,2000)
+    servos.A1.setAngle(90)
+})
+input.pinA7.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})</code></pre>
+<p>Now let’s add some code to reset our box and close the lid when we clap.</p>
+<ol start="15">
+<li>From the <code>|input:INPUT||</code> Toolbox drawer, drag out an <code>||input:on loud sound||</code> block onto the Workspace.</li>
+<li>From the <code>|light:LIGHT||</code> Toolbox drawer, scroll to the bottom and drag out a <code>|light:clear||</code> block onto the Workspace, and drop it into the <code>||input:on loud sound||</code> block.</li>
+<li>From the <code>||servos:SERVOS||</code> Toolbox drawer, drag out a <code>||servos:set servo||</code> block onto the Workspace and drop it into the <code>||input:on loud sound||</code> block </li>
+<li>In the <code>||servos:set servo||</code> block, change the angle to <code>0</code> degrees.</li>
+</ol>
+<p>You will most likely need to experiment with different values for the servo motor angles to get the box lid to open and close properly.</p>
+<p>Final Program:</p>
+<pre><code class="lang-blocks">input.pinA4.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+input.pinA5.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+// This is the correct answer
+input.pinA6.onEvent(ButtonEvent.Click, function () {
+    music.magicWand.play()
+    light.showAnimation(light.sparkleAnimation,2000)
+    music.powerUp.play()
+    light.showAnimation(light.rainbowAnimation,2000)
+    servos.A1.setAngle(90)
+})
+input.pinA7.onEvent(ButtonEvent.Click, function () {
+    music.wawawawaa.play()
+    light.setAll(0xff0000)
+})
+input.onLoudSound(function () {
+    light.clear()
+    servos.A1.setAngle(0)
+})</code></pre>
+<h2 id="variations-and-challenges">Variations and Challenges</h2><p>There are several different variations to this Question Box Project:</p>
+<ul>
+<li>Instead of having one right answer, have the box open and have different light and sound combinations depending on the input pressed.</li>
+<li>Collaborate on a series of question boxes and see who can get all the correct answers.</li>
+<li>Add other servos to the surface and have them wave something to help celebrate the right answer or convey other ideas.</li>
+<li>Try engineering a different way to use a servo to open and close the box.</li>
+<li>Use a variable to randomize which copper tape opens the lid, then design a game around it or incorporate it into another game. For example, spaces on a board game might the player to visit The Box of Doom. If you’re unlucky enough to open it, move your piece back five spaces or suffer some other penalty (or reward!). </li>
+</ul>
+<pre><code class="lang-package">servo</code></pre>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

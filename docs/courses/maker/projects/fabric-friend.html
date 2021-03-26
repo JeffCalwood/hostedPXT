@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/eGtGoPhjmcc/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/eGtGoPhjmcc/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="fabric-friend-project">Fabric Friend Project</h1><h2 id="description">Description</h2><p>In this project, students will design and create their own “Fabric Friend” using sewing, circuitry, and coding. Creating a stuffed critter of some kind is a great fabric arts project for students 8 years and up. Once you have sewn the Fabric Friend, you can find a variety of fun and challenging ways to code it to respond to the world.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/fabric-friend.jpg" alt="Electronic Interactive Fabric Friend" loading="lazy"></p>
+<h2 id="safety-tips">Safety Tips</h2><p>Making and using a Fabric Friend is great fun for older kids but be sure to keep this toy away from young children and pets since they could be harmed by chewing on or ingesting the battery or other electronic components.</p>
+<h2 id="time-required">Time required</h2><table>
+<thead>
+<tr>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="ui image" src="/static/courses/maker/projects/common/2-to-4-hours.png" alt="2 to 4 hours on a 4 hour time scale" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+2-4 hours – time will vary depending upon the complexity of the creation and the skill level of the creators.</p>
+<h2 id="academic-tie-ins">Academic Tie-ins</h2><ul>
+<li><strong>Science</strong>: create fabric friends that are cells, fungi, planets, or other curriculum-related entities.</li>
+<li><strong>History</strong>: make an object, character or symbol from the past.</li>
+<li><strong>Literature</strong>: make an object that’s important to the plot or character of a story, stitch key words or names from the story onto the fabric friend.</li>
+<li><strong>Performing Arts</strong>: make an electronic prop that can be used in a play, or dance performance.</li>
+</ul>
+<h2 id="materials">Materials</h2><p>See the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapter for more details on materials.</p>
+<ul>
+<li>2-4 Flora NeoPixels – <a target="_blank" rel="nofollow noopener" href="https://www.adafruit.com/product/1260">https://www.adafruit.com/product/1260</a></li>
+<li>Conductive 2 or 3-ply thread – <a target="_blank" rel="nofollow noopener" href="https://www.adafruit.com/product/641">https://www.adafruit.com/product/641</a></li>
+<li>Alligator clip wires for testing – <a target="_blank" rel="nofollow noopener" href="https://www.adafruit.com/product/3447">https://www.adafruit.com/product/3447</a></li>
+<li>Normal sewing thread</li>
+<li>Sewing needle</li>
+<li>Clear nail polish</li>
+<li>Scissors</li>
+<li>Fabric of choice – felt works well and is easy to work with (for example – <a target="_blank" rel="nofollow noopener" href="https://www.amazon.com/flic-flac-30cmx20cm-Assorted-Nonwoven-Patchwork/dp/B01IQN7NZW">https://www.amazon.com/flic-flac-30cmx20cm-Assorted-Nonwoven-Patchwork/dp/B01IQN7NZW</a>)</li>
+<li>Stuffing material – like cotton balls, or fiber fill (for example – <a target="_blank" rel="nofollow noopener" href="https://www.amazon.com/Fairfield-PF20B-Poly-Fil-Premium-20-Ounce/dp/B00TH2E3PA">https://www.amazon.com/Fairfield-PF20B-Poly-Fil-Premium-20-Ounce/dp/B00TH2E3PA</a>)</li>
+</ul>
+<h3 id="optional">Optional</h3><ul>
+<li>Fabric scissors – these are helpful!</li>
+<li>Embroidery thread – for additional embellishment</li>
+<li>Fabric glue – to hold NeoPixels down for sewing, or for other embellishments</li>
+<li>Fabric pen or tailor’s chalk</li>
+</ul>
+<h2 id="making">Making</h2><h4 id="plan-your-fabric-friend">Plan your fabric friend</h4><ul>
+<li>Sketch your plan on a piece of paper first, and be sure that the narrowest parts of the creation will still allow stuffing.</li>
+<li>You should also have an idea of where the Circuit Playground Express and NeoPixels will be placed.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making1.jpg" alt="Draw the design for your creature on paper first" loading="lazy"></p>
+<ul>
+<li>It’s important to also plan for where the battery pack will go. In your hand? Clipped to a loop?</li>
+<li>Lithium ion polymer (Lipo) batteries can often be tucked inside a small pocket that you create in the project.</li>
+</ul>
+
+    <div class="ui info message">
+        <div class="content">
+            <p>LiPo batteries are a great power source for projects but they require care during use and charging. <strong>LiPo batteries can be a fire hazard if not handled properly</strong>.</p>
+<p>Please read these <strong><a target="_blank" rel="nofollow noopener" href="https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion">guidelines</a></strong> on battery handling before you use them!</p>
+
+        </div>
+    </div>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making2.jpg" alt="Lipo batteries are smaller and more portable than alkaline battery packs" loading="lazy"></p>
+<h3 id="cut-out-the-front-and-back-sides">Cut out the front and back sides</h3><ul>
+<li>Cut out the paper plan, trace it onto the material, and cut out two versions.</li>
+<li>A fabric pen will fade away after an hour or so (or with rubbing).</li>
+<li>You can use a regular marker pen as well, but just be sure to cut inside or outside of the markings so they won’t show.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making3.jpg" alt="Cut out design from fabric" loading="lazy"></p>
+<h3 id="match-the-two-sides-of-the-fabric-friend">Match the two sides of the Fabric Friend</h3><ul>
+<li>If the two sides of the friend don’t quite match, you can mark extra material on one, then trim it off.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making4.jpg" alt="Match the front and back of your Fabric Friend" loading="lazy"></p>
+<h3 id="plan-the-wiring">Plan the wiring</h3><p>We’re almost ready to plan the sewing and wiring. First, let’s review how the components will need to be connected.</p>
+<p>Here is a look at a Flora NeoPixel:</p>
+<ul>
+<li>On the one side, with a small minus sign, is the negative tab</li>
+<li>Opposite, with a plus sign, is the positive</li>
+<li>And in the middle with arrows is the signal line</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making5.jpg" alt="Positive, Negative and the Signal/Data connectors on the Flora NeoPixel" loading="lazy"></p>
+<p>The Circuit Playground Express has three <strong>GND</strong> (ground) pins to connect to the minus / negative tabs on the NeoPixels:</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making6.jpg" alt="Ground (GND) connectors on the Circuit Playground Express connect to the Negative (-) pins" loading="lazy"></p>
+<p>The Circuit Playground Express has three power pins (two <strong>3.3V</strong> and one <strong>VOUT</strong>) to connect to the plus / positive tabs on the NeoPixels:</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making7.jpg" alt="Power (3.3V or VOUT) connectors on the Circuit Playground Express connect to the Positive (+) pins" loading="lazy"></p>
+<p>The Signal or Data connectors are pins <strong>A0</strong> – <strong>A7</strong> on the Circuit Playground Express. This diagram shows how you might sew conductive thread from the Circuit Playground Express to NeoPixels:</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making8.jpg" alt="You will need to connect Ground, Power, and Signal pins from the Circuit Playground Express to the Flora NeoPixels" loading="lazy"></p>
+<p>Sketch your proposed wiring on paper first. Remember that none of the lines of conductive thread can touch each other, so make sure you leave plenty of space between the wires.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making9.jpg" alt="Sketch out your wiring diagram on paper first" loading="lazy"></p>
+<h4 id="wiring-tips-">Wiring tips:</h4><ul>
+<li>If you are planning to wire several NeoPixels together in a chain, the Ground and Power lines should connect all the way from the originating power or <strong>GND</strong> pin on the Circuit Playground Express to every positive or negative loop on the NeoPixels. If you have to start a new piece of conductive thread on the needle, try to make this transition at the eyelet of the NeoPixel so you can loop it through a number of times and get a good contact between old and new thread.</li>
+<li>In contrast, the middle signal/data thread needs to stop and start on either side of the NeoPixel so the signal travels through the light.</li>
+<li>Position the Flora NeoPixels so that the signal arrows are in the middle, and all pointing outward. In the example below I am using the <strong>A1</strong> pin for this.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making10.jpg" alt="Use a single thread to connect Ground and Power connectors, but start and stop the thread for the Signal/Data wiring between each Flora NeoPixel" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making11.jpg" alt="Be sure the arrows on the NeoPixels point away from the Circuit Playground Express" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making12.jpg" alt="The yellow signal thread runs from a pin like A1 and stops at one side of the NeoPixel and resumes on the other. This allows the signal to pass through the NeoPixel and give directions" loading="lazy"></p>
+<h3 id="test-with-alligator-clip-wires">Test with Alligator Clip Wires</h3><ul>
+<li>When you have drawn a plan that seems promising, test it with alligator clip wires.</li>
+<li>Make all the connections as you expect to make them with conductive thread, do your coding, and test. It’s much better to work out problems at this stage than after having invested time into sewing the lines incorrectly. </li>
+<li>Remember that the colors of alligator clip wires don’t matter in terms of functionality (they are all the same inside), but color coordinating helps keep you organized.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making13.jpg" alt="Test your lights using alligator clip wires before sewing the connections" loading="lazy"></p>
+<p>Transfer your Wiring Diagram onto the Fabric cutout.</p>
+<ul>
+<li>Copy your wiring diagram from paper to the fabric.</li>
+<li>Mark the position of the Circuit Playground Express and the Flora NeoPixels.</li>
+<li>Use a fabric pen or tailor’s chalk if you have it.</li>
+<li>If you use a regular pen, make the markings on the inside so they don’t show.</li>
+</ul>
+<h3 id="sew-on-the-circuit-playground-express">Sew on the Circuit Playground Express</h3><ul>
+<li>Using normal sewing thread, secure the Circuit Playground Express to your material.</li>
+<li>Use some of the pin connectors that you won’t need for the conductive thread to secure the board to the material.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making14.jpg" alt="Position the Circuit Playground Express on the Fabric" loading="lazy"></p>
+<ul>
+<li>To knot thread off, you can run the needle through a stitch on the back side.</li>
+<li>Run the needle back through the resulting loop, repeat this process several times, and you will knot off the line.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making15.jpg" alt="Tying off the thread in the back" loading="lazy"></p>
+<h3 id="sewing-the-connections">Sewing the connections</h3><ul>
+<li>Now that you have the Circuit Playground Express securely fastened to the fabric, it’s time to use conductive thread to make the electrical connections.</li>
+<li>Using the wiring diagram as a guide, sew connections between the Power, Ground, and Signal pin connectors.</li>
+<li>A simple <a target="_blank" rel="nofollow noopener" href="https://en.wikipedia.org/wiki/Running_stitch">running stitch</a> works well.</li>
+<li>Take care that none of the lines of conductive thread touch each other.</li>
+<li>Also remember to end a line of stitching at the middle of a NeoPixel and resume with new thread on the other side.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making16.jpg" alt="Stop and start sewing the signal thread connections to the NeoPixels" loading="lazy"></p>
+<p>You can use a single line of stitches that begin and end at eyelets on the hardware.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making17.jpg" alt="Single stitches" loading="lazy"></p>
+<p>You can also use a double line of stitches. This is more work but makes a more reliable connection.</p>
+<ul>
+<li>Sew to one piece of hardware, then back to the other. </li>
+<li>At the eyelets, loop around the hole about three times, then run a stitch in through the loops, then go through the eyelet one more time. </li>
+<li>It’s vital that there be a solid connection at the eyelets.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making18.jpg" alt="Double stitches" loading="lazy"></p>
+<h3 id="tying-off">Tying off</h3><ul>
+<li>Once you sew back to the starting place, you can use the tail you left sticking out to easily tie several knots.</li>
+<li>Add a dab of clear nail polish to help prevent it from unraveling.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making19.jpg" alt="Tying off thread in the back" loading="lazy"></p>
+<p>The end result of either the single line of stitches or a double one should be lines of thread that make strong connections and that don’t touch.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making20.jpg" alt="Strong connections are critical" loading="lazy"></p>
+<p>For more on working with conductive thread and NeoPixels see a great video by Becky Stern of Adafruit:</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="eGtGoPhjmcc"
+                data-placeholder="https://img.youtube.com/vi/eGtGoPhjmcc/0.jpg">
+            </div>
+        </div>
+    </div>
+<p><br /></p>
+<p>Also, you can read more about it at: <a target="_blank" rel="nofollow noopener" href="https://learn.adafruit.com/flora-rgb-smart-pixels/add-more-pixels">Sewing more pixels</a>.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making21.jpg" alt="Finished sewn connections" loading="lazy"></p>
+<h4 id="sewing-tips-">Sewing Tips:</h4><ul>
+<li>Try to keep the stitches fairly close together, and don’t pull them too tight.</li>
+<li>Be certain the lines of stitching don’t touch each other.</li>
+<li>A fabric pen can help you sew straight, and fabric glue can keep NeoPixels in place (though keep glue in the middle of them only, not on the outside connector pins).</li>
+<li>Loop the conductive thread snugly about 3-4 times around each eyelet pin on the Circuit Playground Express and the NeoPixels. It’s vital that there be a good connection between thread and pin.</li>
+<li>When you end a sewing session, flip the material over, trim any tails of the conductive thread knots, and apply a dab of clear nail polish to them. This will help prevent them from unravelling. Let them dry before your next session.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making22.jpg" alt="Clear nail polish helps keep the conductive thread from unravelling" loading="lazy"></p>
+<p>Refer to the Sewing section of the <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/maker-tools-techniques.html">Maker Tools and Techniques</a> chapter for more sewing tips and tricks. </p>
+<h3 id="sew-the-two-pieces-of-fabric-together">Sew the two pieces of fabric together</h3><ul>
+<li>Using normal sewing thread, sew the front and back of the Fabric Friend together.</li>
+<li>Leave an opening to stuff with filling.</li>
+<li>In this example, the quadropus legs were sewn first because they would be the most difficult to stuff with fill.</li>
+</ul>
+<h3 id="stuff-with-filling">Stuff with filling</h3><ul>
+<li>Using your fill material, gently push filling into the opening of your Fabric Friend.</li>
+<li>If your fabric friend has small appendages, like the legs of this quadropus, stuff them first.</li>
+<li>You can use a pencil to help push fill into a narrow leg.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making23.jpg" alt="Use a pencil to stuff filling in hard-to-reach places" loading="lazy"></p>
+<h3 id="find-a-home-for-the-battery-pack">Find a home for the battery pack</h3><ul>
+<li>You can sew a simple pocket on your Fabric Friend to place the battery pack.</li>
+<li>You can also put the battery inside your Fabric Friend, just keep in mind you won’t be able to access it, so you’ll need to disconnect the battery cable to turn off the lights.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making24.jpg" alt="Battery pocket side view" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making25.jpg" alt="Battery pocket back view" loading="lazy"></p>
+<h3 id="close-the-opening">Close the opening</h3><ul>
+<li>After you have finished stuffing your Fabric Friend, sew the opening closed.</li>
+<li>When you knot off the thread, do it inside the two pieces of fabric so that the knot won’t be visible.</li>
+<li>Push the needle through one layer, then exit through that same layer leaving a loop, then come back in through the loop. This will create a knot. Do that several times, and you’ll have knotted off the thread.</li>
+</ul>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making26.jpg" alt="Sew the opening closed" loading="lazy"></p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making27.jpg" alt="Knot off the end of the thread" loading="lazy"></p>
+<p>To hide the tail, run the needle and thread through the body of the Fabric Friend. Compress it a little, then snip the thread. The tail will be hidden inside.</p>
+<p><img class="ui image" src="/static/courses/maker/projects/fabric-friend/friend-making28.jpg" alt="Hide the tail of the thread inside" loading="lazy"></p>
+<h2 id="coding">Coding</h2><p>See <a  rel="nofollow noopener" href="/hostedPXT/docs/courses/maker/general/coding.html">Coding the Circuit Playground Express</a> for more information.</p>
+<p>There are several different ideas you use to program you Fabric Friend. We’ll show you two – a Fabric Friend with predictive power, and one that you must feed to keep happy. </p>
+<h3 id="fortune-telling-quadropus">Fortune-Telling Quadropus</h3><p>First, let’s code a Fabric Friend with predictive powers, kind of like a Magic Eight Ball. We’ll use a randomly chosen variable to select what face the Fabric Friend will make upon the input of <code>||input:on shake||</code>. The responses might be positive, negative, or confused. See this video demo:</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="-sgF1Fzbc9E"
+                data-placeholder="https://img.youtube.com/vi/-sgF1Fzbc9E/0.jpg">
+            </div>
+        </div>
+    </div>
+<ol>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, click on the <strong>Make a Variable</strong> button to make 3 variables.</li>
+<li>Name them as follows: <code>Left Eye</code>, <code>Right Eye</code>, and <code>Magic 8</code>. </li>
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag an <code>||loops:on start||</code> block onto the Workspace.</li>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag out two <code>||variables:set||</code> blocks, and place them into the <code>||loops:on start||</code> block.</li>
+<li>Using the drop-down menu in one of the <code>||variables:set||</code> blocks, change the variable to <code>Right Eye</code>.</li>
+</ol>
+<pre><code class="lang-blocks">let Right_Eye = 0
+let Left_Eye = 0</code></pre>
+<ol start="6">
+<li>From the <code>||light:NEOPIXEL||</code> Toolbox drawer, drag out two <code>||light:create strip||</code> blocks onto the Workspace and place one each into the <code>Left Eye</code> and <code>Right Eye</code> <code>||variables:set||</code> variable blocks replacing the <code>0</code>. </li>
+<li>Using the drop-down menus in the two <code>||light:create strip||</code> blocks, set them to the Pins that you will be using to connect to your Flora NeoPixels (for example <strong>A1</strong> and <strong>A3</strong>).</li>
+<li>In the two <code>||light:create strip||</code> blocks, change the value of the <code>pixels</code> to <code>1</code> (there is only 1 light on each of your Flora NeoPixels.</li>
+</ol>
+<pre><code class="lang-blocks">let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)</code></pre>
+<p>Next, we want to set our lights to a default setting.</p>
+<ol start="9">
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag a <code>||light:set all pixels||</code> block onto the Workspace and place in the <code>||loops:on start||</code> block.</li>
+<li>Using the color menu on the <code>||light:set all pixels||</code> block, set a light blue color.</li>
+<li>From the <code>||light:NEOPIXEL||</code> Toolbox drawer, drag out two <code>||light:strip show animation||</code> blocks onto the Workspace and place in the <code>||loops:on start||</code> block after the <code>||light:set all pixels||</code> block.</li>
+<li>Using the variable drop-down menu in the <code>||light:strip show animation||</code> blocks, select the <code>Left Eye</code> and <code>Right Eye</code> variables.</li>
+<li>Using the animation drop-down menu in the <code>||light:strip show animation||</code> blocks, select the Sparkle animation </li>
+<li>Using the duration drop-down menu in the <code>||light:strip show animation||</code> blocks, select 2 seconds (or <code>2000</code> milliseconds).</li>
+</ol>
+<pre><code class="lang-blocks">let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)
+light.setAll(0x00ffff)
+Left_Eye.showAnimation(light.sparkleAnimation, 2000) 
+Right_Eye.showAnimation(light.sparkleAnimation, 2000)</code></pre>
+<p>Next, let’s activate our Creature Prediction by shaking our creature.</p>
+<ol start="15">
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag an <code>||input:on shake||</code> block onto the Workspace.</li>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer drag a <code>||variables:set||</code> block onto the Workspace and drop into the <code>||input:on shake||</code> block.</li>
+<li>Using the drop-down menu in the <code>||variables:set||</code> block, select the <code>Magic 8</code> variable.</li>
+<li>From the <code>||math:MATH||</code> Toolbox drawer drag a <code>||math:pick random||</code> block onto the Workspace and drop into the <code>||variables:set||</code> block replacing <code>0</code>.</li>
+<li>In the <code>||math:pick random||</code> block, change the values to <code>1</code> and <code>3</code>, giving you 3 prediction choices.</li>
+</ol>
+<pre><code class="lang-block">let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+})</code></pre>
+<ol start="20">
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer drag an <code>||logic:if then else||</code> block onto the Workspace and drop into the <code>||input:on shake||</code> block after the <code>||variables:set||</code> block. </li>
+<li>In the <code>||logic:if then else||</code>  block, click the plus <strong>(+)</strong> icon to add an <code>||logic:else if||</code> clause.</li>
+</ol>
+<pre><code class="lang-block">let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (true) {
+
+    } else if (false) {
+
+    } else {
+
+    }
+})</code></pre>
+<ol start="22">
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer drag 2 comparison <code>||logic:0 = 0||</code> blocks onto the Workspace and place one into the <code>||logic:if||</code> clause replacing true, and place the other into the <code>||logic:else if||</code> clause.</li>
+</ol>
+<pre><code class="lang-block">let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (0 == 0) {
+
+    } else if (0 == 0) {
+
+    } else {
+
+    }
+})</code></pre>
+<ol start="23">
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer drag out two <code>||variables:Magic 8||</code> variable blocks onto the Workspace.</li>
+<li>Place one in the first slot of the <code>||logic:if||</code> clause comparison block.</li>
+<li>Place the other one in the first slot of the <code>||logic:else if||</code> clause comparison block. Note: line up the left edge of the block in the slot where you want to place it. </li>
+<li>In the <code>||logic:if||</code> clause comparison block, change the value of the second slot to <code>1</code>. </li>
+<li>In the <code>||logic:else if||</code> clause comparison block, change the value of the second slot to <code>2</code>.</li>
+</ol>
+<pre><code class="lang-block">let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
+
+    } else if (Magic_8 == 2) {
+
+    } else {
+
+    }
+})</code></pre>
+<p>The basic Magic Eight ball responses are ‘Yes’, ‘No’, and ‘Maybe’ so try to design your lights to mean one of these three responses.</p>
+<ol start="28">
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer drag a <code>||light:show ring||</code> block onto the Workspace and drop under the <code>||logic:if||</code> clause.</li>
+<li>Create a meaningful ‘Yes’ design for your <code>||light:show ring||</code> block (for example a Green Smile).</li>
+<li>From the <code>||light:NEOPIXEL||</code> Toolbox drawer, drag out two <code>|light:strip set all pixels||</code> blocks onto the Workspace and place after the <code>||light:show ring||</code> block.</li>
+<li>Using the variable drop-down menus on the <code>|light:strip set all pixels||</code> blocks, change the variables to <code>Left Eye</code> and <code>Right Eye</code>.</li>
+<li>Using the color picker menu, select a meaningful color for your creature’s eyes that corresponds to your <code>||light:show ring||</code> design (green color for example).</li>
+<li>From the <code>|music:MUSIC||</code> Toolbox drawer drag a <code>|music:play sound|</code> block onto the Workspace and place after the <code>||light:Right Eye set all pixels||</code> block.</li>
+<li>Using the drop-down menu in the <code>|music:play sound|</code> block, select a meaningful sound that corresponds to the prediction you are making.</li>
+<li>From the <code>||loops:LOOPS||</code>  Toolbox drawer, drag a <code>||loops:pause||</code> block onto the Workspace and place after the <code>|music:play sound|</code> block.</li>
+<li>Using the drop-down menu in the <code>||loops:pause||</code> block, select 2 seconds (or <code>2000</code> milliseconds).</li>
+</ol>
+<pre><code class="lang-block">let Right_Eye: light.NeoPixelStrip = null 
+let Left_Eye: light.NeoPixelStrip = null 
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
+        light.showRing(`black black black black black green green green green green`) 
+        Left_Eye.setAll(0x00ff00) 
+        Right_Eye.setAll(0x00ff00) 
+        music.magicWand.play() 
+        pause(2000)
+    } else if (Magic_8 == 2) {
+
+    } else {
+
+    }
+})</code></pre>
+<p>Now, put the same blocks in the <code>||logic:else if||</code>, and <code>||logic:else||</code> clauses – but change your light design and sounds to mean “No”, and “Maybe”.</p>
+<p>Finally, at the end of our <code>||input:on shake||</code> block, let’s reset our creature to the default light settings.</p>
+<ul>
+<li>You can do this by right-clicking and selecting <strong>Duplicate</strong> on the <code>||light:set all pixels||</code> block and the two <code>||light:show animation||</code> blocks in the <code>||loops:on start||</code> block to copy those blocks, and place them at the very end of our <code>||input:on shake||</code> block.</li>
+</ul>
+<p>Your final program may look like this:</p>
+<pre><code class="lang-blocks">let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
+        light.showRing(`black black black black black green green green green green`)
+        Left_Eye.setAll(0x00ff00)
+        Right_Eye.setAll(0x00ff00)
+        music.magicWand.play()
+        pause(2000)
+    } else if (Magic_8 == 2) {
+        light.showRing(`purple purple purple purple purple black black black black black`)
+        Left_Eye.setAll(0x7f00ff)
+        Right_Eye.setAll(0x7f00ff)
+        music.powerDown.play()
+        pause(2000)
+    } else {
+        light.showRing(`blue black black black blue orange blue orange orange orange`)
+        Left_Eye.setAll(0x0000ff)
+        Right_Eye.setAll(0xff8000)
+        music.wawawawaa.play()
+        pause(2000)
+    }
+    light.setAll(0x00ffff)
+    Left_Eye.showAnimation(light.sparkleAnimation, 2000)
+    Right_Eye.showAnimation(light.sparkleAnimation, 2000)
+})
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)
+light.setAll(0x00ffff)
+Left_Eye.showAnimation(light.sparkleAnimation, 2000)
+Right_Eye.showAnimation(light.sparkleAnimation, 2000)</code></pre>
+<h3 id="the-very-hungry-quadropus">The Very Hungry Quadropus</h3><p>Now let’s code a Fabric Friend who gets hungry and irritable over time, but who can be fed to regain happiness and composure.</p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="amhDOy34m7g"
+                data-placeholder="https://img.youtube.com/vi/amhDOy34m7g/0.jpg">
+            </div>
+        </div>
+    </div>
+<ol>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, click on the <strong>Make a Variable</strong> button to make 3 variables.</li>
+<li>Name them as follows: <code>Left Eye</code>, <code>Right Eye</code>, and <code>Hunger</code>.</li>
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag an <code>||loops:on start||</code> block onto the Workspace.</li>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag out three <code>||variables:set||</code> blocks, and place them into the <code>||loops:on start||</code> block.</li>
+<li>Using the drop-down menu in the <code>||variables:set||</code> blocks, change the variables to <code>Left Eye</code>, <code>Right Eye</code>, and <code>Hunger</code>.</li>
+<li>From the <code>||light:NEOPIXEL||</code> Toolbox drawer, drag out two <code>||light:create strip||</code> blocks onto the Workspace and place one each into the <code>Left Eye</code> and <code>Right Eye</code> <code>||variables:set||</code> variable blocks replacing the <code>0</code>.</li>
+<li>Using the drop-down menus in the two <code>||light:create strip||</code> blocks, set them to the Pins that you will be using to connect to your Flora NeoPixels (for example <strong>A4</strong> and <strong>A7</strong>).</li>
+<li>In the two <code>||light:create strip||</code> blocks, change the value of the pixels to <code>1</code> (there is only 1 light on each of your Flora NeoPixels).</li>
+</ol>
+<pre><code class="lang-blocks">let Hunger: number = 0
+let Right_Eye: light.NeoPixelStrip = null 
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A4, 1) 
+Right_Eye = light.createStrip(pins.A7, 1)
+Hunger = 0</code></pre>
+<p>Now that we have our variables set up, let’s make sure we can reset our Quadropus’ hunger value.</p>
+<ol start="9">
+<li>From the <code>|input:INPUT||</code> Toolbox drawer, drag an <code>||input:on button A click||</code> block onto the Workspace.</li>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag a <code>||variables:set||</code> variable block onto the Workspace and drop into the <code>||input:on button click||</code> block.</li>
+<li>In the <code>||variables:set||</code> variable block, use the drop-down menu to select the <code>Hunger</code> variable.</li>
+</ol>
+<pre><code class="lang-blocks">let Hunger: number = 0
+let Right_Eye: light.NeoPixelStrip = null 
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A4, 1) 
+Right_Eye = light.createStrip(pins.A7, 1)
+Hunger = 0
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    Hunger = 0
+})</code></pre>
+<p>Next, let’s set the value for <code>Hunger</code> – when we feed the Quadropus the Hunger value should go down. And we can use the Light sensor on the Circuit Playground Express to tell if we bring food up to the Quadropus’ mouth – the light will get dark.</p>
+<ol start="12">
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag a <code>||loops:forever||</code> loop onto the Workspace.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag three <code>||logic:if||</code> blocks onto the Workspace and place them in the <code>||loops:forever||</code> loop.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag three comparison blocks into the <code>||logic:if||</code> blocks.</li>
+</ol>
+<p>Build your program to look like the following:</p>
+<pre><code class="lang-block">let Hunger = 0
+forever(function () {
+    if (input.lightLevel() &lt; 25) {
+        Hunger += -3
+    }
+    if (Hunger &gt; 0) {
+        Hunger = 0
+    }
+    if (Hunger &lt; 0) {
+        Hunger = 22
+    }
+})</code></pre>
+<ul>
+<li>The first <code>||logic:if||</code> statement will check if the light level goes beneath 25 (or whatever value works for the room you’re in), then subtract <code>3</code> from the <code>Hunger</code> variable. This way, when you put food to the Fabric Friend’s mouth, you can dim the light hitting the sensor and feed it.</li>
+<li>The second <code>||logic:if||</code> statement checks if the <code>Hunger</code> variable goes below zero, then <code>||variables:set Hunger to 0||</code>. This is useful because otherwise you might have <code>Hunger</code> become -30 accidentally, and it would take a long time for the variable to get back to positive numbers.</li>
+<li>Likewise, the last <code>||logic:if||</code> statement prevents the variable from getting too large as time goes on and resets it down to <code>22</code>.</li>
+</ul>
+<p>Now we need to evaluate what to show when our Quadropus is feeling different levels of hunger, and also increase the <code>Hunger</code> value as time goes on.</p>
+<ol start="15">
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag out another <code>||loops:forever||</code> loop and drop onto the Workspace </li>
+<li>From the <code>||logic:LOGIC||</code> drawer, you’ll need an <code>||logic:if then else||</code> block, and click on the plus <strong>(+)</strong> sign to add a blank slot for every facial expression you want your fabric friend to have.</li>
+<li>From the <code>||logic:LOGIC||</code> Toolbox drawer, drag comparison blocks into the <code>||logic:if then else||</code> block to evaluate the different levels of hunger.</li>
+</ol>
+<p>If you want to evaluate a range of values – for example, if <code>Hunger</code> is between <code>14</code> and <code>18</code>, then use the Boolean <code>||logic:and||</code> block with 2 comparison blocks.</p>
+<p>Finally, we need a way for the variable <code>Hunger</code> to change.</p>
+<ol start="18">
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag a <code>||loops:pause||</code> block at the end of the <code>||logic:if then else||</code> block and set the value to 1 second (<code>1000</code> ms).</li>
+<li>From the <code>||variables:VARIABLES||</code> Toolbox drawer, drag a <code>||variables:change||</code> variable block onto the Workspace and drop after the <code>||loops:pause||</code> block.
+That way, every second the variable will get bigger. For 13 seconds, the first statement of the <code>||logic:if then else||</code> will be true. Then, for seconds 14-17 the second statement will be the true one. And so on.</li>
+</ol>
+<p>Finally, it’s time to make facial expressions for each of the Fabric Friend’s states of mind. Be sure to pay attention to where the mini USB port and the JST battery connector are on the simulator so you can orient your smiles, frowns, etc. correctly.</p>
+<ol start="20">
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag <code>||light:show ring||</code> blocks to each of the <code>||logic:if||</code>, <code>||logic:else if||</code>, and <code>||logic:else||</code> clauses to set the lights of the Circuit Playground Express.</li>
+<li>From the <code>||light:NEOPIXEL||</code> Toolbox drawer, drag <code>|||light:strip set all pixels||</code> blocks to each of the <code>||logic:if||</code>, <code>||logic:else if||</code>, and <code>||logic:else||</code> clauses to set the lights of the NeoPixels.</li>
+</ol>
+<p>Your final program may look like this:</p>
+<pre><code class="lang-blocks">let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+let Hunger: number = 0
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    Hunger = 0
+})
+Left_Eye = light.createStrip(pins.A4, 1)
+Right_Eye = light.createStrip(pins.A7, 1)
+Hunger = 0
+forever(function () {
+    if (Hunger &lt; 14) {
+        light.showRing(`black black black black black orange orange orange orange orange`)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+    } else if (Hunger &gt;= 14 &amp;&amp; Hunger &lt; 18) {
+        light.showRing(`black black black black black black orange orange orange black`)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+        pause(100)
+        Left_Eye.setAll(0xff0000)
+        Right_Eye.setAll(0xff0000)
+        pause(100)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+    } else if (Hunger &gt;= 18 &amp;&amp; Hunger &lt; 22) {
+        light.showRing(`black black black black black blue blue blue blue blue`)
+        Left_Eye.setAll(0xff0000)
+        Right_Eye.setAll(0xff0000)
+        pause(100)
+        light.showRing(`blue blue blue blue blue black black black black black`)
+        pause(100)
+    } else {
+        music.siren.play()
+        light.showRing(`blue blue blue blue blue black black black black black`)
+        Left_Eye.setAll(0x00ff00)
+        Right_Eye.setAll(0x7f00ff)
+        pause(Math.randomRange(100, 200))
+        Left_Eye.setAll(0xff0000)
+        pause(100)
+        Right_Eye.setAll(0x007fff)
+        Left_Eye.setAll(0xffffff)
+        pause(Math.randomRange(100, 200))
+        Right_Eye.setAll(0xff00ff)
+        pause(100)
+    }
+    pause(1000)
+    Hunger += 1
+})
+forever(function () {
+    if (input.lightLevel() &lt; 25) {
+        Hunger += -3
+    }
+    if (Hunger &lt; 0) {
+        Hunger = 0
+    }
+    if (Hunger &gt; 30) {
+        Hunger = 22
+    }
+})</code></pre>
+<h2 id="variations-and-challenges">Variations and Challenges</h2><p>There is a lot of freedom with this project to create your own interactions, light designs, and sound effects. Some ideas might be:</p>
+<ul>
+<li>Instead of hungry, how about making a fabric friend who gets sleepy when it gets dark?</li>
+<li>How about making the fabric friend randomly express an emotion periodically and require soothing of some kind? Use the accelerometer or motion sensor to detect when it gets petted.</li>
+<li>What about a fabric friend who needs you to applaud it? Use the sound sensor to design an audio interaction.</li>
+</ul>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

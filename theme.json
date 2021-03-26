@@ -1,0 +1,643 @@
+{
+    "accentColor": "#0089BF",
+    "logoUrl": "https://www.adafruit.com/product/3333",
+    "logo": "docs/static/logo.svg",
+    "docsLogo": "docs/static/logo.square.svg",
+    "portraitLogo": "docs/static/logo.square.svg",
+    "footerLogo": "docs/static/logo.square.svg",
+    "cardLogo": "docs/static/icons/android-chrome-192x192.png",
+    "appLogo": "docs/static/icons/android-chrome-192x192.png",
+    "organization": "Microsoft MakeCode",
+    "organizationUrl": "https://makecode.com/",
+    "organizationLogo": "docs/static/Microsoft-logo_rgb_c-gray-square.png",
+    "organizationWideLogo": "docs/static/Microsoft-logo_rgb_c-white.png",
+    "homeUrl": "https://makecode.adafruit.com/",
+    "betaUrl": "https://makecode.adafruit.com/beta",
+    "embedUrl": "https://makecode.adafruit.com/",
+    "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
+    "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
+    "githubUrl": "https://github.com/Microsoft/pxt-adafruit",
+    "crowdinProject": "kindscript",
+    "boardName": "Adafruit Circuit Playground Express",
+    "driveDisplayName": "CPLAYBOOT",
+    "docMenu": [
+        {
+            "name": "Support",
+            "path": "https://aka.ms/makecodeadafruitforums"
+        },
+        {
+            "name": "Blocks",
+            "path": "/blocks"
+        },
+        {
+            "name": "JavaScript",
+            "path": "/javascript"
+        },
+        {
+            "name": "Reference",
+            "path": "/reference"
+        },
+        {
+            "name": "Buy",
+            "path": "https://www.adafruit.com/products/3333"
+        }
+    ],
+    "showHomeScreen": true,
+    "homeScreenHero": "docs/static/getting-started/CN-banner.jpg",
+    "invertedMenu": true,
+    "invertedToolbox": true,
+    "invertedMonaco": true,
+    "invertedGitHub": true,
+    "monacoToolbox": true,
+    "selectLanguage": true,
+    "availableLocales": [
+        "en",
+        "de",
+        "ja"
+    ],
+    "simAnimationEnter": "roll in",
+    "simAnimationExit": "roll out",
+    "highContrast": true,
+    "greenScreen": true,
+    "enableTrace": true,
+    "print": true,
+    "hasAudio": true,
+    "usbHelp": [],
+    "extendEditor": true,
+    "extendFieldEditors": true,
+    "disableBlockIcons": true,
+    "scriptManager": true,
+    "baseTheme": "dark",
+    "simGifTransparent": "rgba(0,0,0,0)",
+    "qrCode": true,
+    "importExtensionFiles": true,
+    "experiments": [
+        "autoWebUSBDownload",
+        "debugger",
+        "debugExtensionCode",
+        "simScreenshot",
+        "simGif"
+    ],
+    "socialOptions": {
+        "twitterHandle": "adafruit",
+        "orgTwitterHandle": "MSMakeCode",
+        "hashtags": "MakeCode"
+    },
+    "blocklyOptions": {
+        "grid": {
+            "spacing": 20,
+            "length": 2,
+            "colour": "rgba(189, 195, 199, 0.20)",
+            "snap": true
+        }
+    },
+    "blocklyColors": {
+        "insertionMarker": "#FFFFFF",
+        "insertionMarkerOpacity": 0.5
+    },
+    "blockColors": {
+        "loops": "#40bf4a",
+        "logic": "#4cbfe6",
+        "math": "#9966ff",
+        "variables": "#FF6680",
+        "text": "#ffab19",
+        "advanced": "#00272B",
+        "functions": "#005a9e",
+        "arrays": "#8A1C7C"
+    },
+    "allowPackageExtensions": true,
+    "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
+    "githubEditor": true,
+    "chooseLanguageRestrictionOnNewProject": true,
+    "python": true,
+    "pythonToolbox": true,
+    "errorList": true,
+    "blocksCollapsing": true,
+    "showProjectSettings": true,
+    "debugger": true,
+    "simGifMaxFrames": 44,
+    "simScreenshotMaxUriLength": 300000,
+    "nameProjectFirst": true,
+    "openProjectNewTab": true,
+    "TOC": [
+        {
+            "name": "About",
+            "path": "/about",
+            "subitems": []
+        },
+        {
+            "name": "FAQ",
+            "path": "/faq",
+            "subitems": []
+        },
+        {
+            "name": "Projects",
+            "path": "/projects",
+            "subitems": []
+        },
+        {
+            "name": "GitHub",
+            "path": "/github",
+            "subitems": []
+        },
+        {
+            "name": "Examples",
+            "path": "/examples",
+            "subitems": [
+                {
+                    "name": "Blinky",
+                    "path": "/examples/blinky",
+                    "subitems": []
+                },
+                {
+                    "name": "Animation Shaker",
+                    "path": "/examples/animation-shaker",
+                    "subitems": []
+                },
+                {
+                    "name": "Juggle Counter",
+                    "path": "/examples/juggle-counter",
+                    "subitems": []
+                },
+                {
+                    "name": "Energy Glove",
+                    "path": "/examples/energy-glove",
+                    "subitems": []
+                },
+                {
+                    "name": "Dice",
+                    "path": "/examples/dice",
+                    "subitems": []
+                },
+                {
+                    "name": "Level",
+                    "path": "/examples/level",
+                    "subitems": []
+                },
+                {
+                    "name": "Counter",
+                    "path": "/examples/counter",
+                    "subitems": []
+                },
+                {
+                    "name": "Egg game",
+                    "path": "/examples/egg-game",
+                    "subitems": []
+                },
+                {
+                    "name": "Reaction",
+                    "path": "/examples/reaction",
+                    "subitems": []
+                },
+                {
+                    "name": "Photon beatbox",
+                    "path": "/examples/photon-beatbox",
+                    "subitems": []
+                },
+                {
+                    "name": "Spin it",
+                    "path": "/examples/spin-it",
+                    "subitems": []
+                },
+                {
+                    "name": "Metronome",
+                    "path": "/examples/metronome",
+                    "subitems": []
+                },
+                {
+                    "name": "Beat visualizer",
+                    "path": "/examples/beat-visualizer",
+                    "subitems": []
+                },
+                {
+                    "name": "Fireflies",
+                    "path": "/examples/fireflies",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Courses",
+            "path": "/courses",
+            "subitems": [
+                {
+                    "name": "Maker",
+                    "path": "/courses/maker",
+                    "subitems": []
+                },
+                {
+                    "name": "Using the Pins",
+                    "path": "/learnsystem/pins-tutorial",
+                    "subitems": []
+                },
+                {
+                    "name": "Logic Lab",
+                    "path": "/learnsystem/logic-lab",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Reference",
+            "path": "/reference",
+            "subitems": [
+                {
+                    "name": "input",
+                    "path": "/reference/input",
+                    "subitems": []
+                },
+                {
+                    "name": "light",
+                    "path": "/reference/light",
+                    "subitems": []
+                },
+                {
+                    "name": "music",
+                    "path": "/reference/music",
+                    "subitems": []
+                },
+                {
+                    "name": "network",
+                    "path": "/reference/network",
+                    "subitems": []
+                },
+                {
+                    "name": "pins",
+                    "path": "/reference/pins",
+                    "subitems": []
+                },
+                {
+                    "name": "control",
+                    "path": "/reference/control",
+                    "subitems": []
+                },
+                {
+                    "name": "console",
+                    "path": "/reference/console",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Blocks",
+            "path": "/blocks",
+            "subitems": [
+                {
+                    "name": "On Start",
+                    "path": "/blocks/on-start",
+                    "subitems": []
+                },
+                {
+                    "name": "Loops",
+                    "path": "/blocks/loops",
+                    "subitems": [
+                        {
+                            "name": "repeat",
+                            "path": "/blocks/loops/repeat",
+                            "subitems": []
+                        },
+                        {
+                            "name": "for",
+                            "path": "/blocks/loops/for",
+                            "subitems": []
+                        },
+                        {
+                            "name": "while",
+                            "path": "/blocks/loops/while",
+                            "subitems": []
+                        },
+                        {
+                            "name": "for of",
+                            "path": "/blocks/loops/for-of",
+                            "subitems": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Logic",
+                    "path": "/blocks/logic",
+                    "subitems": [
+                        {
+                            "name": "if",
+                            "path": "/blocks/logic/if",
+                            "subitems": []
+                        },
+                        {
+                            "name": "Boolean",
+                            "path": "/blocks/logic/boolean",
+                            "subitems": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Variables",
+                    "path": "/blocks/variables",
+                    "subitems": [
+                        {
+                            "name": "assign",
+                            "path": "/blocks/variables/assign",
+                            "subitems": []
+                        },
+                        {
+                            "name": "change var",
+                            "path": "/blocks/variables/change",
+                            "subitems": []
+                        },
+                        {
+                            "name": "var",
+                            "path": "/blocks/variables/var",
+                            "subitems": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Math",
+                    "path": "/blocks/math",
+                    "subitems": []
+                },
+                {
+                    "name": "JavaScript blocks",
+                    "path": "/blocks/javascript-blocks",
+                    "subitems": []
+                },
+                {
+                    "name": "Custom blocks",
+                    "path": "/blocks/custom",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Python",
+            "path": "/python",
+            "subitems": [
+                {
+                    "name": "Calling",
+                    "path": "/python/call",
+                    "subitems": []
+                },
+                {
+                    "name": "Sequencing",
+                    "path": "/python/sequence",
+                    "subitems": []
+                },
+                {
+                    "name": "Variables",
+                    "path": "/python/variables",
+                    "subitems": []
+                },
+                {
+                    "name": "Operators",
+                    "path": "/python/operators",
+                    "subitems": []
+                },
+                {
+                    "name": "Statements",
+                    "path": "/python/statements",
+                    "subitems": []
+                },
+                {
+                    "name": "Functions",
+                    "path": "/python/functions",
+                    "subitems": []
+                },
+                {
+                    "name": "Classes",
+                    "path": "/python/classes",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "path": "/javascript",
+            "subitems": [
+                {
+                    "name": "Calling",
+                    "path": "/javascript/call",
+                    "subitems": []
+                },
+                {
+                    "name": "Sequencing",
+                    "path": "/javascript/sequence",
+                    "subitems": []
+                },
+                {
+                    "name": "Variables",
+                    "path": "/javascript/variables",
+                    "subitems": []
+                },
+                {
+                    "name": "Operators",
+                    "path": "/javascript/operators",
+                    "subitems": []
+                },
+                {
+                    "name": "Statements",
+                    "path": "/javascript/statements",
+                    "subitems": []
+                },
+                {
+                    "name": "Functions",
+                    "path": "/javascript/functions",
+                    "subitems": []
+                },
+                {
+                    "name": "Types",
+                    "path": "/javascript/types",
+                    "subitems": []
+                },
+                {
+                    "name": "Classes",
+                    "path": "/javascript/classes",
+                    "subitems": []
+                },
+                {
+                    "name": "Interfaces",
+                    "path": "/javascript/interfaces",
+                    "subitems": []
+                },
+                {
+                    "name": "Generics",
+                    "path": "/javascript/generics",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Types",
+            "path": "/types",
+            "subitems": [
+                {
+                    "name": "Number",
+                    "path": "/types/number",
+                    "subitems": []
+                },
+                {
+                    "name": "String",
+                    "path": "/types/string",
+                    "subitems": []
+                },
+                {
+                    "name": "Boolean",
+                    "path": "/types/boolean",
+                    "subitems": []
+                },
+                {
+                    "name": "Array",
+                    "path": "/types/array",
+                    "subitems": []
+                },
+                {
+                    "name": "Function",
+                    "path": "/types/function",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Miscellaneous",
+            "path": "",
+            "subitems": [
+                {
+                    "name": "About",
+                    "path": "/about",
+                    "subitems": []
+                },
+                {
+                    "name": "Support",
+                    "path": "/support",
+                    "subitems": []
+                },
+                {
+                    "name": "Translate",
+                    "path": "/translate",
+                    "subitems": []
+                },
+                {
+                    "name": "Sharing projects",
+                    "path": "/share",
+                    "subitems": []
+                },
+                {
+                    "name": "Offline support",
+                    "path": "/offline",
+                    "subitems": []
+                },
+                {
+                    "name": "Save",
+                    "path": "/save",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Developers",
+            "path": "",
+            "subitems": [
+                {
+                    "name": "Command Line Interface",
+                    "path": "/cli",
+                    "subitems": []
+                },
+                {
+                    "name": "Visual Studio Code support",
+                    "path": "/code",
+                    "subitems": []
+                },
+                {
+                    "name": "Blocks Embed",
+                    "path": "/blocks-embed",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Projects",
+            "path": "/projects",
+            "subitems": [
+                {
+                    "name": "Magic Wand",
+                    "path": "/projects/magic-wand",
+                    "subitems": []
+                },
+                {
+                    "name": "Dandelion",
+                    "path": "/projects/dandelion",
+                    "subitems": []
+                },
+                {
+                    "name": "Fidget Spinner",
+                    "path": "/projects/fidget-spinner",
+                    "subitems": []
+                },
+                {
+                    "name": "Watch Timer",
+                    "path": "/projects/watch-timer",
+                    "subitems": []
+                },
+                {
+                    "name": "Lucky Wheel",
+                    "path": "/projects/lucky-wheel",
+                    "subitems": []
+                },
+                {
+                    "name": "Headlamp",
+                    "path": "/projects/headlamp",
+                    "subitems": []
+                },
+                {
+                    "name": "Guitar",
+                    "path": "/projects/guitar",
+                    "subitems": []
+                },
+                {
+                    "name": "Hot Potato",
+                    "path": "/projects/hot-potato",
+                    "subitems": []
+                },
+                {
+                    "name": "Light Monster",
+                    "path": "/projects/light-monster",
+                    "subitems": []
+                },
+                {
+                    "name": "Reaction!",
+                    "path": "/projects/reaction",
+                    "subitems": []
+                },
+                {
+                    "name": "Wearable NeoPixels",
+                    "path": "/projects/wearable-neopixels",
+                    "subitems": []
+                },
+                {
+                    "name": "Fabric Friend",
+                    "path": "/projects/fabric-friend",
+                    "subitems": []
+                }
+            ]
+        },
+        {
+            "name": "Hardware",
+            "path": "/device",
+            "subitems": [
+                {
+                    "name": "Simulator",
+                    "path": "/device/simulator",
+                    "subitems": []
+                },
+                {
+                    "name": "USB",
+                    "path": "/device/usb",
+                    "subitems": []
+                }
+            ]
+        }
+    ],
+    "id": "adafruit",
+    "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",
+    "name": "Adafruit Circuit Playground Express",
+    "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
+    "htmlDocIncludes": {}
+}

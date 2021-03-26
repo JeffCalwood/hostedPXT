@@ -1,0 +1,24 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Adafruit Circuit Playground Express",
+    "short_name": "circuitplayground",
+    "background_color": "#FAFAFA",
+    "icons": [
+        {
+            "src": "@cdnUrl@/blob/d5724c883c601daec44a88ed9df1c721b65ca829/static/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "types": "image/png"
+        },
+        {
+            "src": "@cdnUrl@/blob/0df625ba27c8e2d9581794f4bf48660d01399cd0/static/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "types": "image/png"
+        }
+    ],
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "landscape",
+    "theme_color": "#0089BF"
+}

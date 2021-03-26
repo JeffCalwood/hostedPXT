@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="https://img.youtube.com/vi/M1RwRYzcDYQ/0.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/M1RwRYzcDYQ/0.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="bmo-music-box">BMO Music Box</h1><p><strong>The BMO Music Box from <a target="_blank" rel="nofollow noopener" href="https://www.cartoonnetwork.com/video/adventure-time/">Adventure Time</a>!</strong></p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/at-banner.jpg" alt="Gumball, Darwin, and BMO" loading="lazy"></p>
+<p>BMO is Finn and Jake’s loyal, protective and helpful friend, who also happens to be a living video game console, portable electrical outlet, music player, and more! Create your own BMO Music box that will play different sounds and tempos when you move it around, or when the light changes around it.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/bmo.jpg" alt="BMO cartoon character" loading="lazy"></p>
+
+    <div class="ui grid">
+        <div class="ten wide column">
+            <div class="ui embed mdvid" data-source="youtube" data-id="M1RwRYzcDYQ"
+                data-placeholder="https://img.youtube.com/vi/M1RwRYzcDYQ/0.jpg">
+            </div>
+        </div>
+    </div>
+<p><br /></p>
+<h2 id="prepare">Prepare</h2><h3 id="this-project">This project</h3><p><strong>Level</strong>: Medium<br />
+<strong>Duration</strong>: 60 minutes<br />
+<strong>Flipgrid</strong>: <a target="_blank" rel="nofollow noopener" href="https://flipgrid.com/bde07799">https://flipgrid.com/bde07799</a></p>
+<h3 id="materials">Materials</h3><p>Collect the materials in the list before starting your project Make.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/materials.jpg" alt="Materials" loading="lazy"></p>
+<ul>
+<li><a target="_blank" rel="nofollow noopener" href="https://www.adafruit.com/product/3517">Adafruit Circuit Playground Express Base Kit</a></li>
+<li>Small cardboard box, or shoebox </li>
+<li>Blue construction paper (or blue paint) </li>
+<li>Piece of white paper </li>
+<li>Black marker </li>
+<li>Crayons, colored pencils or markers </li>
+<li>Blue pipe cleaners </li>
+<li>Tape or Glue </li>
+<li>Scissors</li>
+</ul>
+<h2 id="make">Make</h2><h3 id="step-1-create-bmo-s-body">Step 1: Create BMO’s body</h3><p>Use blue construction paper and tape/glue, or blue paint to cover the outside of the box completely in blue.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make1.jpg" alt="Blue paper covering the box" loading="lazy"></p>
+<h3 id="step-2-draw-and-attach-bmo-s-face-and-details">Step 2: Draw and attach BMO’s face and details</h3><p>On the piece of white paper, draw outlines of BMO’s face and controls. Color in BMO’s face, and controls using colored markers, pencils or crayons.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make2.jpg" alt="Color the buttons and controls on the paper" loading="lazy"></p>
+<p>Cut out and glue or tape the face and controls onto the blue box.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make3.jpg" alt="Cutout the button and control shapes" loading="lazy"></p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make4.jpg" alt="Glue the button and control shapes on the box" loading="lazy"></p>
+<p>Using a black marker, make sure to add BMO’s side label and lines for his other slots.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make5.jpg" alt="Glue the button and control shapes on the box" loading="lazy"></p>
+<h3 id="step-3-attach-bmo-s-arms-and-legs">Step 3: Attach BMO’s arms and legs</h3><p>Using blue pipe cleaners, cut or bend 4 pieces to a good size for BMO’s arms and legs.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make6.jpg" alt="Glue the button and control shapes on the box" loading="lazy"></p>
+<p>Using one end of the scissors, poke holes in places on the box where arms and legs should be. Insert the pipe cleaners in the holes.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make7.jpg" alt="Poke pipe cleaner holes in the box" loading="lazy"></p>
+<h3 id="step-4-insert-the-batteries">Step 4: Insert the batteries</h3><p>Insert the batteries into the battery pack.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make8.jpg" alt="Three batteries in the battery pack" loading="lazy"></p>
+<h3 id="step-5-attach-the-circuit-playground-express-and-battery-pack">Step 5: Attach the Circuit Playground Express and battery pack</h3><p>Use a small piece of tape and roll it inside out to form a loop so that the sticky side is on the outside. Place the tape on the back of the Adafruit Circuit Playground Express and stick onto the top of BMO.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make9.jpg" alt="Tape rolled and stuck to back of the board" loading="lazy"></p>
+<p>Attach the wire from the battery pack to the Adafruit Circuit Playground Express.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make10.jpg" alt="Battery pack wire connected to the board" loading="lazy"></p>
+<p>Tape the battery pack onto the back of BMO. Be careful not to tape over the On/Off switch.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/make11.jpg" alt="Battery pack taped to the back of the box" loading="lazy"></p>
+<h3 id="complete-">Complete!</h3><p>Congratulations! You have made your own BMO!</p>
+<p>Move on to the next step to code BMO.</p>
+<h2 id="code">Code</h2><p>Code BMO to play music – based on the how you’re moving him, and how much light he’s in.</p>
+<h3 id="concepts">Concepts</h3><ul>
+<li>Accelerometer or motion sensor </li>
+<li>Light sensor </li>
+<li>Sounds</li>
+</ul>
+<h3 id="blocks">Blocks</h3><pre><code class="lang-cards">light.graph(0)
+input.acceleration(Dimension.X)
+input.lightLevel()
+music.playTone(262, music.beat(BeatFraction.Half))</code></pre>
+<h3 id="step-1-make-an-animation-using-the-motion-sensor">Step 1: Make an animation using the Motion Sensor</h3><p>The motion sensor, also called an “accelerometer”, measures motion (also called acceleration) along 3 dimensions:</p>
+<ul>
+<li>X-axis (left and right)</li>
+<li>Y-axis (forward and backward)</li>
+<li>Z-axis (up and down)</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/cpx-accelerometer.jpg" alt="Accelerometer located on the board" loading="lazy"></p>
+<p>The accelerometer is right in the middle of the Adafruit Circuit Playground Express, under the <strong>RESET</strong> button. It uses values from negative -1023 to positive 1023. When the Adafruit Circuit Playground Express is laying flat, face up: X = 0, Y = 0, Z = -1023.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/accelerometer-axes.png" alt="Accelerometer axes directions" loading="lazy"></p>
+<p>We will use the lights on our Adafruit Circuit Playground Express to show the values of the accelerometer when it’s tilted left and right (along the X axis).</p>
+<ul>
+<li>Open <a target="_blank" rel="nofollow noopener" href="https://makecode.adafruit.com/">MakeCode</a> in your web browser</li>
+<li>Click on <strong>New Project</strong></li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/new-project.png" alt="New Project button" loading="lazy"></p>
+<ul>
+<li>Name your Project as <strong>MusicBox</strong> (note – you don’t need to click the <strong>Save</strong> button, just type the name)</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/project-name.png" alt="Project name window" loading="lazy"></p>
+<ul>
+<li>From the <code>||light:LIGHT||</code> Toolbox drawer, drag out a <code>||light:graph||</code> block to the coding Workspace and drop it into the <code>|loops:forever||</code> block.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/code1.png" alt="&#39;graph&#39; block in the &#39;forever&#39; loop" loading="lazy"></p>
+<ul>
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag out an <code>||input:acceleration||</code> block and drop into the <code>||light:graph||</code> block replacing the <code>0</code>.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/code2.png" alt="&#39;acceleration&#39; block" loading="lazy"></p>
+<p>Try moving your mouse left and right over the Simulator to see how the lights change as the Adafruit Circuit Playground Express moves.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/simulator.gif" alt="Simulator" loading="lazy"></p>
+<p>Notice that a <strong>Console</strong> button also appears under the Simulator – if you click that you’ll see a graph view of the accelerometer values!</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/console.png" alt="Console view with graph" loading="lazy"></p>
+<h3 id="step-2-add-music">Step 2: Add music</h3><ul>
+<li>From the <code>||loops:LOOPS||</code> Toolbox drawer, drag out another <code>||loops:forever||</code> block onto the Workspace.</li>
+<li><strong>Note!</strong> You may want to take this opportunity to mute your computer or the Simulator. Press the speaker icon under the Simulator to mute.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/sim-mute.png" alt="Mute button in simulator" loading="lazy"></p>
+<ul>
+<li>From the <code>||music:MUSIC||</code> Toolbox drawer, drag out a <code>||music:play tone||</code> block onto the Workspace and place in this <code>||loops:forever||</code> block.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/code3.png" alt="&#39;play tone&#39; block" loading="lazy"></p>
+<p>Notice that this <code>||music:play tone||</code> block contains 2 fields – one for the note <em>pitch</em>, and one for the note <em>duration</em>.</p>
+<h3 id="step-3-change-music-pitch-based-on-light-level">Step 3: Change music pitch based on light level</h3><p>We want to change the pitch, or the note that’s being played, based on the light level (darker makes a lower note and brighter makes a higher note). The Adafruit Circuit Playground Express can play notes that are represented as frequency values (in Hertz).</p>
+<p>Also, the Adafruit Circuit Playground Express measures how light or dark it is through a light level sensor (0 = completely dark and 255 = bright light).</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/light-sensor.png" alt="Light level sensor located on the board" loading="lazy"></p>
+<p>We want to map the light level values (0 - 255) to frequency values. We know that 300 MHz is about the frequency for the <code>Middle D</code> note, so let’s add <code>300</code> to our light level values.</p>
+<ul>
+<li>From the <code>||math:MATH||</code> Toolbox drawer, drag out an addition <code>||math:0 + 0||</code> operator block onto the Workspace and drop it into the first slot of the <code>||music:play tone||</code> block replacing <code>Middle C</code>.</li>
+</ul>
+<pre><code class="lang-block">forever(function () {
+    music.playTone(0 + 0, music.beat(BeatFraction.Half))
+})</code></pre>
+<ul>
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag the <code>||input:light level||</code> block onto the Workspace and drop it into the first slot of the <code>||math:0 + 0||</code> block replacing <code>0</code>.</li>
+<li>Type <code>300</code> into the second slot.</li>
+</ul>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/bmo-music-box/code5.png" alt="&#39;light level&#39; block" loading="lazy"></p>
+<h3 id="step-4-change-music-tempo-based-on-motion">Step 4: Change music tempo based on motion</h3><p>Now let’s change the tempo based on the motion of BMO. We know that acceleration uses values from -1023 to 1023. The tempo is the number of milliseconds that the tone lasts for, and these values are always positive (1000 milliseconds = 1 second). So, we’ll need to convert our accelerometer values to be all positive.</p>
+<ul>
+<li>From the <code>||math:MATH||</code> Toolbox drawer, drag out an <code>||math:absolute of||</code> value block onto the Workspace and drop it into the second slot of the <code>||music:play tone||</code> block replacing the <code>1/2 beat</code>. </li>
+</ul>
+<pre><code class="lang-block">forever(function () {
+    music.playTone(input.lightLevel() + 300, Math.abs(0))
+})</code></pre>
+<ul>
+<li>From the <code>||input:INPUT||</code> Toolbox drawer, drag the <code>||input:acceleration||</code> block into the <code>||math:absolute of||</code> value block.</li>
+</ul>
+<p>Your final program may look something like this:</p>
+<pre><code class="lang-blocks">forever(function () {
+    light.graph(input.acceleration(Dimension.X))
+})
+forever(function () {
+    music.playTone(input.lightLevel() + 300, Math.abs(input.acceleration(Dimension.X)))
+})</code></pre>
+<h3 id="step-5-download">Step 5: Download</h3><p>Once you’re happy with your program, click the <strong>Download</strong> button and follow the instructions to download the code to your Adafruit Circuit Playground Express.</p>
+<p><img class="ui image" src="/static/cp/projects/cartoon-network/jake-hotdog/download.png" alt="Download dialog" loading="lazy"></p>
+<p>Disconnect the Adafruit Circuit Playground Express from the USB cable and turn on the batteries. Tilt BMO left and right, cover and expose BMO to the light - listen to the beautiful music!</p>
+<p>Great work!</p>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

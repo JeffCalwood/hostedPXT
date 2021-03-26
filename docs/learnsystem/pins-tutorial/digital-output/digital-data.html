@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
+	<meta name="Description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+
+	<!-- ifdef incontexttranslations endif -->
+	
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta name="twitter:image" content="/static/cp/learn/pins-tutorial/digital-output/three-bit-parallel.jpg" />
+
+<meta property="og:title" content="Adafruit Circuit Playground Express - Blocks / Javascript editor" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="/static/cp/learn/pins-tutorial/digital-output/three-bit-parallel.jpg" />
+
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="docs/static/icons/android-chrome-192x192.png">
+<link rel="shortcut icon" href="docs/static/icons/android-chrome-192x192.png">
+<meta name="theme-color" content="#0089BF">
+
+<!-- end include meta.html -->
+
+	
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" data-rtl="/blb/rtlsemantic.css" href="/hostedPXT/semantic.css" />
+<link id="blocklycss"  data-rtl="/blb/rtlblockly.css" rel="stylesheet" href="/hostedPXT/blockly.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/style.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/vs.css" />
+<link rel="stylesheet" href="/hostedPXT/docfiles/target.css" />
+
+<script src="/hostedPXT/jquery.js" type="text/javascript"></script>
+<script src="/hostedPXT/semantic.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/target.js" type="text/javascript"></script>
+<script src="/hostedPXT/embed.js" type="text/javascript"></script>
+<script src="/hostedPXT/docfiles/docs.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #0089BF; }
+.ui.inverted.accent { background: #0089BF; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+	<div id="accessibleMenu" class="ui accessibleMenu borderless fixed menu docs" role="menubar">
+		
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+	</div>
+
+	
+<!-- include tocheader.html -->
+<div id="top-bar" class="ui fixed accent borderless inverted main menu hideprint docs" role="menubar">
+    <div>
+        
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menuitem" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+        <div class="item" role="menuitem">
+            <div>
+                <a href="/hostedPXT/docs/.html" class="header" tabindex="0" title="Go to editor">
+                    <img aria-hidden="true" role="presentation" class="ui mini image" src="docs/static/logo.square.svg" />
+                </a>
+            </div>
+            <div>
+                Documentation
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <form id="tocsearch1" class="search" role="form" method="get" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.adafruit.com/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="side-menu" class="ui vertical accent inverted sidebar menu left hideprint docs" role="menubar">
+    <!-- TOC Menu (tocheader.html) -->
+    <div class="menuContainer" role="menu">
+        
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/faq.html" role="menuitem">FAQ</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects.html" role="menuitem">Projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/github.html" role="menuitem">GitHub</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/examples.html">Examples</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/animation-shaker.html" role="menuitem">Animation Shaker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/juggle-counter.html" role="menuitem">Juggle Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/energy-glove.html" role="menuitem">Energy Glove</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/dice.html" role="menuitem">Dice</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/level.html" role="menuitem">Level</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/counter.html" role="menuitem">Counter</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/egg-game.html" role="menuitem">Egg game</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/reaction.html" role="menuitem">Reaction</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/photon-beatbox.html" role="menuitem">Photon beatbox</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/spin-it.html" role="menuitem">Spin it</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/metronome.html" role="menuitem">Metronome</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/beat-visualizer.html" role="menuitem">Beat visualizer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/examples/fireflies.html" role="menuitem">Fireflies</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/courses.html">Courses</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/courses/maker.html" role="menuitem">Maker</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/pins-tutorial.html" role="menuitem">Using the Pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/learnsystem/logic-lab.html" role="menuitem">Logic Lab</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/reference.html">Reference</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/reference/input.html" role="menuitem">input</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/light.html" role="menuitem">light</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/music.html" role="menuitem">music</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/network.html" role="menuitem">network</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/pins.html" role="menuitem">pins</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/control.html" role="menuitem">control</a>
+
+
+    <a class="item " href="/hostedPXT/docs/reference/console.html" role="menuitem">console</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks.html">Blocks</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/loops/for-of.html" role="menuitem">for of</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/python.html">Python</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/python/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/python/classes.html" role="menuitem">Classes</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/javascript.html">JavaScript</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/hostedPXT/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/types.html">Types</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/hostedPXT/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Miscellaneous</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/hostedPXT/docs/support.html" role="menuitem">Support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/translate.html" role="menuitem">Translate</a>
+
+
+    <a class="item " href="/hostedPXT/docs/share.html" role="menuitem">Sharing projects</a>
+
+
+    <a class="item " href="/hostedPXT/docs/offline.html" role="menuitem">Offline support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/save.html" role="menuitem">Save</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="">Developers</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/cli.html" role="menuitem">Command Line Interface</a>
+
+
+    <a class="item " href="/hostedPXT/docs/code.html" role="menuitem">Visual Studio Code support</a>
+
+
+    <a class="item " href="/hostedPXT/docs/blocks-embed.html" role="menuitem">Blocks Embed</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/projects.html">Projects</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/projects/magic-wand.html" role="menuitem">Magic Wand</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/dandelion.html" role="menuitem">Dandelion</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fidget-spinner.html" role="menuitem">Fidget Spinner</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/watch-timer.html" role="menuitem">Watch Timer</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/lucky-wheel.html" role="menuitem">Lucky Wheel</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/headlamp.html" role="menuitem">Headlamp</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/hot-potato.html" role="menuitem">Hot Potato</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/light-monster.html" role="menuitem">Light Monster</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/reaction.html" role="menuitem">Reaction!</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/wearable-neopixels.html" role="menuitem">Wearable NeoPixels</a>
+
+
+    <a class="item " href="/hostedPXT/docs/projects/fabric-friend.html" role="menuitem">Fabric Friend</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui  accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="right chevron icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/hostedPXT/docs/device.html">Hardware</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/hostedPXT/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/hostedPXT/docs/device/usb.html" role="menuitem">USB</a>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+	<div id="docs" class="pusher">
+
+		<div class="article" id="maincontent">
+			<div class="article-inner">
+
+				
+<!-- include header.html -->
+<div class="ui one column padded grid hideprint">
+    <div class="column ui container">
+        
+    </div>
+</div>
+<!-- end include header.html -->
+
+
+				<div class="main ui container fluid mainbody">
+					<button id="printbtn" class="circular ui icon right floated button hideprint hidemobile"
+						title="Print" aria-label="Print">
+						<i class="icon print"></i>
+					</button>
+					
+    <div class="ui text">
+        <h1 id="digital-data">Digital data</h1><p>Besides turning on LEDs or sending a pulse to notify some other device, the digital pins can send data as binary numbers. Together, multiple signals can create several bits or digits of a binary number. Each digit of course is 2 times the place value of the previous one, <code>2**0</code>, <code>2**1</code>, <code>2**2</code>, and so on. If 3 digital signals use to represent a binary number, and if all of the signals are at the high level, the 3 bit binary number is <code>111</code>. This means that each signal gives three different values of <code>1 * 2**0</code>, <code>1 * 2**1</code>, and <code>1 * 2**3</code>. That equals <code>1 + 2 + 4</code> in decimal which makes the number <code>7</code>.</p>
+<h2 id="parallel-data">Parallel data</h2><p>Since each pin can only signal one of two values at any particular moment, one bit of a digital number can be represented at a pin. To send larger digital numbers with more bits, you’ll need more pins. Each pin represents a differnet digit of the number. For a 3 digit number there are 3 bits. The first bit (right to left) is the 4’s bit, the second is the 2’s bit, and the third is the 1’s bit. Each digit on the left has a value of 2 times the digit on the right. The number <code>7</code> is equal to <code>4 + 2 + 1</code> so as a 3 bit binary number it would be <code>111</code>. The number <code>3</code> is equal to <code>0 + 2 + 1</code> and its 3 bit binary number is <code>011</code>.</p>
+<p>To send the number <code>7</code> we could use 3 <code>||pins:digital write pin||</code> blocks using pins <strong>A1</strong>, <strong>A2</strong>, and <strong>A3</strong> for each of the bits.</p>
+<pre><code class="lang-block">pins.A1.digitalWrite(true)
+pins.A2.digitalWrite(true)
+pins.A3.digitalWrite(true)</code></pre>
+<p>For the number <code>3</code> we would use the same blocks but with different logic values for some of the bits.</p>
+<pre><code class="lang-block">pins.A1.digitalWrite(true)
+pins.A2.digitalWrite(true)
+pins.A3.digitalWrite(false)</code></pre>
+<p>Maybe you noticed that for the number <code>3</code> we use <strong>A1</strong> for the 1’s digit, <strong>A2</strong> for the 2’s digit, and <strong>A3</strong> for the 4’s digit. In the following diagram, signals are place on three pins to send a different 3 bit number every 2 microseconds. The red numbers at the bottom show what the three values on the pins together are in decimal.</p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/digital-output/three-bit-parallel.jpg" alt="Three bit parallel data" loading="lazy"></p>
+<h3 id="experiment-send-and-receive-parallel-data">Experiment: Send and receive parallel data</h3><hr>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Connect 3 alligator clip leads to pins <strong>A1</strong>, <strong>A2</strong>, and <strong>A3</strong></li>
+<li>Connect the other end of the <strong>A1</strong> lead to pin <strong>A6</strong>.</li>
+<li>Connect the other end of the <strong>A2</strong> lead to pin <strong>A5</strong>.</li>
+<li>Connect the other end of the <strong>A3</strong> lead to pin <strong>A4</strong>.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/digital-output/parallel-data-pins.jpg" alt="Parallel data pin connections" loading="lazy"></p>
+<ol start="3">
+<li>Download the following code to the board:</li>
+</ol>
+<pre><code class="lang-blocks">let dataArray: number[] = []
+let dataOut = 0
+let dataIn = 0
+dataArray = [7, 6, 5, 4, 3, 2, 1, 0]
+forever(function () {
+    dataIn = 0
+    pause(300)
+    if (pins.A4.digitalRead()) {
+        dataIn += 4
+    }
+    if (pins.A5.digitalRead()) {
+        dataIn += 2
+    }
+    if (pins.A6.digitalRead()) {
+        dataIn += 1
+    }
+    light.setPixelColor(dataIn, 0xff0000)
+    pause(500)
+    light.clear()
+    pause(500)
+})
+forever(function () {
+    pause(2000)
+    if (dataArray.length &gt; 0) {
+        dataOut = dataArray.shift()
+        dataArray.push(dataOut)
+        pins.A3.digitalWrite(false)
+        pins.A2.digitalWrite(false)
+        pins.A1.digitalWrite(false)
+        if (dataOut &gt; 3) {
+            pins.A3.digitalWrite(true)
+            dataOut = dataOut - 4
+        }
+        if (dataOut &gt; 1 ) {
+            pins.A2.digitalWrite(true)
+            dataOut = dataOut - 2
+        }
+        if (dataOut &gt; 0) {
+            pins.A1.digitalWrite(true)
+        }
+    }
+})</code></pre>
+<p><strong>Test</strong>: Watch to see which LEDs are lighted while the program runs.</p>
+<p><strong>Result</strong>: The position of the each lighted LED should show that the digital number received at the input pins matches the order of the number sent at the write pins.</p>
+<hr>
+<h3 id="clocked-input-and-output">Clocked input and output</h3><p>If you looked at the code from the experiment you might have noticed that the <code>||loops:forever||</code> loop that reads the input pins has to pause for a shorter amount of time than the loop that writes the data on the output pins. This is so that the input loop won’t miss reading a new value sent from the output loop. Instead of using an input loop we could use two more pins to send and receive a timing signal so input pins are read only when a new value is written.</p>
+<p>This code change uses what is called <em>clocked</em> input and output. We can switch the input code in the experiment to use clocked input by replacing the <code>||loops:forever||</code> with a <code>||pins:on pin rise||</code> event and then removing the input delay <code>||loops:pause||</code>.</p>
+<pre><code class="lang-block">pins.A7.onEvent(PinEvent.Rise, function () {} )</code></pre>
+<p>Now, once the <code>||loops:forever||</code> loop has written the new data values on the output pins, a quick trigger pulse is sent to pin <strong>A7</strong> from <strong>A0</strong> to clock the new input right after the data pins <strong>A1</strong>, <strong>A2</strong>, and <strong>A3</strong> have their new output.</p>
+<pre><code class="lang-block">pins.A0.digitalWrite(true)
+pins.A0.digitalWrite(false)</code></pre>
+<h3 id="experiment-clocked-parallel-data-transfer">Experiment: Clocked parallel data transfer</h3><hr>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Connect 3 alligator clip leads to pins <strong>A0</strong>, <strong>A1</strong>, <strong>A2</strong>, and <strong>A3</strong></li>
+<li>Connect the other end of the <strong>A1</strong> lead to pin <strong>A6</strong>.</li>
+<li>Connect the other end of the <strong>A2</strong> lead to pin <strong>A5</strong>.</li>
+<li>Connect the other end of the <strong>A3</strong> lead to pin <strong>A4</strong>.</li>
+<li>Connect the other end of the <strong>A0</strong> lead to pin <strong>A7</strong>.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/digital-output/clocked-parallel.jpg" alt="Clocked parallel data connections" loading="lazy"></p>
+<ol start="3">
+<li>Download the following code to the board:</li>
+</ol>
+<pre><code class="lang-blocks">let dataArray: number[] = []
+let dataOut = 0
+let dataIn = 0
+dataArray = [7, 6, 5, 4, 3, 2, 1, 0]
+pins.A7.onEvent(PinEvent.Rise, function () {
+    dataIn = 0
+    if (pins.A4.digitalRead()) {
+        dataIn += 4
+    }
+    if (pins.A5.digitalRead()) {
+        dataIn += 2
+    }
+    if (pins.A6.digitalRead()) {
+        dataIn += 1
+    }
+    light.setPixelColor(dataIn, 0xff0000)
+    pause(500)
+    light.clear()
+    pause(500)
+})
+forever(function () {
+    pause(2000)
+    if (dataArray.length &gt; 0) {
+        dataOut = dataArray.shift()
+        dataArray.push(dataOut)
+        pins.A3.digitalWrite(false)
+        pins.A2.digitalWrite(false)
+        pins.A1.digitalWrite(false)
+        if (dataOut &gt; 3) {
+            pins.A3.digitalWrite(true)
+            dataOut = dataOut - 4
+        }
+        if (dataOut &gt; 1 ) {
+            pins.A2.digitalWrite(true)
+            dataOut = dataOut - 2
+        }
+        if (dataOut &gt; 0) {
+            pins.A1.digitalWrite(true)
+        }
+        pins.A0.digitalWrite(true)
+        pins.A0.digitalWrite(false)
+    }
+})</code></pre>
+<p><strong>Test</strong>: Watch to see which LEDs are lighted while the program runs.</p>
+<p><strong>Result</strong>: The position of the each lighted LED should show that the digital number received at the input pins matches the order of the number sent at the write pins.</p>
+<hr>
+<h2 id="serial-data">Serial data</h2><p>It’s not necessary to use a separate pin to transfer each bit of a digital number. Each bit of a number can be written out on one pin in a sequence. Once all of the bits of one number are written, the bits of the next number are written in a sequence too. The receiving device needs to properly assemble the bits to form a value. It also needs to know how many bits each number will have so it can start to assemble the next number. This method of sending and receiving data is call <em>serial data</em> transfer.</p>
+<p>In the following diagram several 3 bit numbers are written in series on the <strong>A2</strong> pin. The red numbers show what the binary digital numbers are in dedimal.</p>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/digital-output/three-bit-serial.jpg" alt="Three bit serial data" loading="lazy"></p>
+<p>Each bit of the 3 bit number is a digit. Each digit has a place value that is 2 times that of the next digit. The code to write a single number out on a pin as bits will have to factor out each place value to know whether to write a <code>1</code> or <code>0</code> for that bit. Here’s some code that will convert a decimal number to bits and write them to the <strong>A3</strong> pin:</p>
+<pre><code class="lang-blocks">let digitalNum = 0
+let digitValue = 2**3
+for (let i = 0; i &lt; 3; i++) {
+    if (digitalNum &gt;= digitValue) {
+        pins.A3.digitalWrite(true)
+        digitalNum += -digitValue
+    } else {
+        pins.A3.digitalWrite(false)   
+    }
+    digitValue = digitValue / 2
+    pause(10)
+}</code></pre>
+<p>Reading a number at an input pin will require something that does the opposite. Each time a new bit is read on the input pin, the code which reads the bit will need multiply the current value of the digital number by 2 and then add in this next bit. To read one number at pin <strong>A6</strong>, the code might look like this:</p>
+<pre><code class="lang-blocks">let bits = 0
+let digitalNum = 0
+for (let i = 0; i &lt; 3; i++) {
+    digitalNum = digitalNum * 2
+    if (pins.A6.digitalRead()) {
+        digitalNum += 1
+    }
+    bits += 1
+    pause(10)
+}</code></pre>
+<h3 id="experiment-read-and-write-serial-data">Experiment: Read and write serial data</h3><hr>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Connect on end of an alligator clip lead to the <strong>A1</strong> pin.</li>
+<li>Connect the other end of that lead to the <strong>A6</strong> pin.</li>
+<li>Get another alligator clip lead and connect one end to the <strong>A2</strong> pin.</li>
+<li>Connect the other end of the second lead to the <strong>A5</strong> pin.</li>
+</ol>
+<p><img class="ui image" src="/static/cp/learn/pins-tutorial/digital-output/freq-divider.jpg" alt="Serial pin connections" loading="lazy"></p>
+<ol start="5">
+<li>Copy the following code into the editor.</li>
+</ol>
+<pre><code class="lang-blocks">let digitValue = 0
+let bits = 0
+let dataOut = 0
+let digitalNum = 0
+let dataArray: number[] = []
+let dataIn = 0
+pins.A5.onEvent(PinEvent.Rise, function () {
+    if (bits &gt; 2) {
+        light.setPixelColor(digitalNum, 0xff0000)
+        digitalNum = 0
+        bits = 0
+    } else {
+        light.clear()
+    }
+    digitalNum = digitalNum * 2
+    if (pins.A6.digitalRead()) {
+        digitalNum += 1
+    }
+    bits += 1
+})
+dataIn = 0
+dataArray = [7, 6, 5, 4, 3, 2, 1, 0]
+forever(function () {
+    if (dataArray.length &gt; 0) {
+        dataOut = dataArray.shift()
+        digitValue = 2 ** 3
+        for (let i = 0; i &lt; 3; i++) {
+            if (dataOut &gt;= digitValue) {
+                pins.A1.digitalWrite(true)
+                digitalNum += 0 - digitValue
+            } else {
+                pins.A1.digitalWrite(false)
+            }
+            pins.A2.digitalWrite(true)
+            pins.A2.digitalWrite(false)
+            digitValue = digitValue / 2
+            pause(300)
+        }
+        dataArray.push(dataOut)
+    }
+})</code></pre>
+<p><strong>Test</strong>: Watch to see which LEDs are lighted while the program runs.</p>
+<p><strong>Result</strong>: The position of the each lighted LED should show that the digital number received at the input pins matches the order of the number sent at the write pins.</p>
+
+    </div>
+
+					<div class="hideprint"></div>
+				</div>
+
+			</div>
+
+			
+<!-- include footer.html -->
+<footer class="ui vertical footer segment hideprint docs inverted" aria-hidden="false">
+    <div class="ui center aligned container">
+        <div class="ui horizontal link list">
+            <a
+                class="item"
+                href="https://twitter.com/intent/follow?screen_name=MsMakeCode"
+                title="Follow us on Twitter"
+                target="_blank"
+                rel="noopener">
+                <i class="huge icon twitter"></i>
+            </a>
+            <a class="item" href="https://www.youtube.com/channel/UCye7YlvFUUQ1dSy0WZZ1T_Q" title="Subscribe to our YouTube channel"
+                target="_blank" rel="noopened">
+                <i class="huge icon youtube"></i>
+            </a>
+            <a class="item" href="mailto:makecode@microsoft.com" title="Send us an Email"
+                target="_blank" rel="noopened">
+                <i class="huge icon mail"></i>
+            </a>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui container horizontal small divided link list">
+            <a id="langpicker" tabindex="0" class="ui item" rel="noopener">
+                <i class="icon xicon globe" aria-hidden="true" role="presentation"></i>Language
+            </a>
+            <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+            <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener">Terms Of Use</a>
+            <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+            <span class="item">© 2020 Microsoft</span>
+        </div>
+        <div class="ui container horizontal small link list poweredBy">
+            <span class="item">Powered by</span>
+            <a class="middle aligned" href="https://makecode.com/" title="Microsoft MakeCode"
+                target="_blank" rel="noopener">
+                <img width="100" src="/static/logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- end include footer.html -->
+
+
+		</div>
+
+	</div>
+
+    
+<!-- include langpicker.html -->
+<div id="langmodal" class="ui modal docs" role="dialog" aria-modal="true" aria-describedby="langmodalheader" tabindex="-1">
+    <h2 id="langmodalheader" class="header">Select Language</h2>
+    <div role="button" class="closeIcon" tabindex="0" aria-label="Close">
+        <i class="icon close remove circle" aria-hidden="true"></i>
+    </div>
+
+	<div class="content">
+	    <div class="group">
+            <div id="availablelocales" class="ui cards centered" role="listbox" aria-label="List of available locales"></div>
+        </div>
+        <div class="ui" id="langmodalfooter">
+            <a class="ui" href="/hostedPXT/docs/translate.html" target="_blank" rel="noopener noreferrer">
+                How do I add a new language?
+            </a>
+
+            <a id="translatebtn" class="ui button" role="button" tabindex="0">
+                Translate this page
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end include langpicker.html -->
+
+	
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- macro codecard -->
+
+<!-- macro tutorialhint -->
+
+<!-- macro reminder -->
+
+<!-- macro alert -->
+
+<!-- macro tip -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro toc-dropdown -->
+
+<!-- macro toc-dropdown-noLink -->
+
+<!-- macro toc-dropdown-noHeading -->
+
+<!-- TODO: duplicates of above for compatability with docsrender.ts;
+    remove with pxtlib/docsrender.ts TOC TODOs after cloud bump. -->
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noHeading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+<!-- end include macros.html -->
+
+	
+<!-- include tracking.html -->
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie) {
+        var appInsights=window.appInsights||function(config){
+            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+            disableAjaxTracking: true,
+            overridePageViewDuration: false,
+            disableExceptionTracking: true,
+            isCookieUseDisabled: !includeCookie,
+            isStorageUseDisabled: !includeCookie,
+            url: "/hostedPXT/ai.0.js"
+        });
+        window.appInsights=appInsights;
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                if (typeof pxtConfig === "undefined" || !pxtConfig) return;
+                var telemetryItem = envelope.data.baseData;
+                telemetryItem.properties = telemetryItem.properties || {};
+                telemetryItem.properties["target"] = pxtConfig.targetId;
+                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+                telemetryItem.properties["cookie"] = includeCookie;
+                if (typeof Windows !== "undefined")
+                    telemetryItem.properties["WindowsApp"] = 1;
+                var userAgent = navigator.userAgent.toLowerCase();
+                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
+                if (userAgentRegexResult) {
+                    telemetryItem.properties["Electron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
+                }
+                if (typeof pxtElectron !== "undefined") {
+                    telemetryItem.properties["PxtElectron"] = 1;
+                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
+                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
+                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
+                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
+                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
+                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
+                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
+                }
+            });
+        });
+        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
+
+        //Scrub the key (if any) from the URL.
+        function scrubUrl(url) {
+            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
+        }
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>
