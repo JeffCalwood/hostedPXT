@@ -1,5 +1,5 @@
 // see https://github.com/Microsoft/monaco-editor
 self.MonacoEnvironment = { 
-    baseUrl: "/" 
+    baseUrl: "/hostedPXT/" 
 };
-importScripts("/vs/base/worker/workerMain.js");
+importScripts("/hostedPXT/vs/base/worker/workerMain.js");

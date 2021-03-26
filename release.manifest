@@ -1,77 +1,77 @@
 CACHE MANIFEST
 
 CACHE:
-/semantic.js
-/main.js
-/pxtapp.js
-/typescript.js
-/marked/marked.min.js
-/highlight.js/highlight.pack.js
-/jquery.js
-/pxtlib.js
-/pxtcompiler.js
-/pxtpy.js
-/pxtblockly.js
-/pxtwinrt.js
-/pxteditor.js
-/pxtsim.js
-/pxtembed.js
-/pxtworker.js
-/pxtweb.js
-/blockly.css
-/semantic.css
-/rtlsemantic.css
+/hostedPXT/semantic.js
+/hostedPXT/main.js
+/hostedPXT/pxtapp.js
+/hostedPXT/typescript.js
+/hostedPXT/marked/marked.min.js
+/hostedPXT/highlight.js/highlight.pack.js
+/hostedPXT/jquery.js
+/hostedPXT/pxtlib.js
+/hostedPXT/pxtcompiler.js
+/hostedPXT/pxtpy.js
+/hostedPXT/pxtblockly.js
+/hostedPXT/pxtwinrt.js
+/hostedPXT/pxteditor.js
+/hostedPXT/pxtsim.js
+/hostedPXT/pxtembed.js
+/hostedPXT/pxtworker.js
+/hostedPXT/pxtweb.js
+/hostedPXT/blockly.css
+/hostedPXT/semantic.css
+/hostedPXT/rtlsemantic.css
 
 
-/editor.js
-/fieldeditors.js
+/hostedPXT/editor.js
+/hostedPXT/fieldeditors.js
 
 # blockly
-/blockly/media/sprites.png
-/blockly/media/click.mp3
-/blockly/media/disconnect.wav
-/blockly/media/delete.mp3
+/hostedPXT/blockly/media/sprites.png
+/hostedPXT/blockly/media/click.mp3
+/hostedPXT/blockly/media/disconnect.wav
+/hostedPXT/blockly/media/delete.mp3
 
 # monaco; keep in sync with webapp/public/index.html
-/vs/loader.js
-/vs/base/worker/workerMain.js
-/vs/basic-languages/bat/bat.js
-/vs/basic-languages/cpp/cpp.js
-/vs/basic-languages/python/python.js
-/vs/basic-languages/markdown/markdown.js
-/vs/editor/editor.main.css
-/vs/editor/editor.main.js
-/vs/editor/editor.main.nls.js
-/vs/language/json/jsonMode.js
-/vs/language/json/jsonWorker.js
+/hostedPXT/vs/loader.js
+/hostedPXT/vs/base/worker/workerMain.js
+/hostedPXT/vs/basic-languages/bat/bat.js
+/hostedPXT/vs/basic-languages/cpp/cpp.js
+/hostedPXT/vs/basic-languages/python/python.js
+/hostedPXT/vs/basic-languages/markdown/markdown.js
+/hostedPXT/vs/editor/editor.main.css
+/hostedPXT/vs/editor/editor.main.js
+/hostedPXT/vs/editor/editor.main.nls.js
+/hostedPXT/vs/language/json/jsonMode.js
+/hostedPXT/vs/language/json/jsonWorker.js
 
 # charts
-/smoothie/smoothie_compressed.js
-/images/Bars_black.gif
+/hostedPXT/smoothie/smoothie_compressed.js
+/hostedPXT/images/Bars_black.gif
 
 # gifjs
-/gifjs/gif.js
+/hostedPXT/gifjs/gif.js
 
 # ai
-/ai.0.js
+/hostedPXT/ai.0.js
 
-/worker.js
-/monacoworker.js
+/hostedPXT/worker.js
+/hostedPXT/monacoworker.js
 
-# ver Fri Mar 26 2021 13:45:02 GMT-0400 (Eastern Daylight Time)
+# ver Fri Mar 26 2021 14:02:12 GMT-0400 (Eastern Daylight Time)
 
 # target
-/docs\static\logo.svg
-/docs\static\logo.square.svg
-/docs\static\logo.square.svg
-/docs\static\logo.square.svg
-/docs\static\icons\android-chrome-192x192.png
-/docs\static\icons\android-chrome-192x192.png
-/docs\static\Microsoft-logo_rgb_c-gray-square.png
-/docs\static\Microsoft-logo_rgb_c-white.png
-/docs\static\getting-started\CN-banner.jpg
+/hostedPXT/docs\static\logo.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\logo.square.svg
+/hostedPXT/docs\static\icons\android-chrome-192x192.png
+/hostedPXT/docs\static\icons\android-chrome-192x192.png
+/hostedPXT/docs\static\Microsoft-logo_rgb_c-gray-square.png
+/hostedPXT/docs\static\Microsoft-logo_rgb_c-white.png
+/hostedPXT/docs\static\getting-started\CN-banner.jpg
 
-/target.js
+/hostedPXT/target.js
 
 NETWORK:
 *

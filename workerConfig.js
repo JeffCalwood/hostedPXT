@@ -1,5 +1,5 @@
 self.setSimulatorWorkerOptions({
     urls: [
-        "/common-sim.js"
+        "/hostedPXT/common-sim.js"
     ]
 })

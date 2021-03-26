@@ -36,7 +36,7 @@
 
 <title>Adafruit Circuit Playground Express - Blocks / Javascript editor</title>
 <meta name="description" content="A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express." />
-<link rel="manifest" href="/sim.webmanifest">
+<link rel="manifest" href="/hostedPXT/sim.webmanifest">
 
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -68,7 +68,7 @@
 <!-- end include appmeta.html -->
 
 
-    <link rel="stylesheet" data-rtl="/rtlsemantic.css" href="/semantic.css" type="text/css">
+    <link rel="stylesheet" data-rtl="/hostedPXT/rtlsemantic.css" href="/hostedPXT/semantic.css" type="text/css">
 </head>
 
 <body class="main">
@@ -98,37 +98,37 @@
     <script>
         // This line gets patched up by the cloud
         var pxtConfig = {
-    "relprefix": "/",
+    "relprefix": "/hostedPXT/",
     "verprefix": "",
-    "workerjs": "/worker.js",
-    "monacoworkerjs": "/monacoworker.js",
-    "gifworkerjs": "/gifjs/gif.worker.js",
-    "serviceworkerjs": "/serviceworker.js",
+    "workerjs": "/hostedPXT/worker.js",
+    "monacoworkerjs": "/hostedPXT/monacoworker.js",
+    "gifworkerjs": "/hostedPXT/gifjs/gif.worker.js",
+    "serviceworkerjs": "/hostedPXT/serviceworker.js",
     "pxtVersion": "6.8.38",
     "pxtRelId": "",
-    "pxtCdnUrl": "/",
-    "commitCdnUrl": "/",
-    "blobCdnUrl": "/",
-    "cdnUrl": "/",
+    "pxtCdnUrl": "/hostedPXT/",
+    "commitCdnUrl": "/hostedPXT/",
+    "blobCdnUrl": "/hostedPXT/",
+    "cdnUrl": "/hostedPXT/",
     "targetVersion": "0.0.0",
     "targetRelId": "",
     "targetUrl": "",
     "targetId": "adafruit",
-    "simUrl": "/simulator.html",
-    "simserviceworkerUrl": "/simulatorserviceworker.js",
-    "simworkerconfigUrl": "/workerConfig.js",
-    "partsUrl": "/siminstructions.html",
-    "runUrl": "/run.html",
-    "docsUrl": "/docs.html",
-    "multiUrl": "/multi.html",
-    "asseteditorUrl": "/asseteditor.html",
-    "skillmapUrl": "/skillmap.html",
+    "simUrl": "/hostedPXT/simulator.html",
+    "simserviceworkerUrl": "/hostedPXT/simulatorserviceworker.js",
+    "simworkerconfigUrl": "/hostedPXT/workerConfig.js",
+    "partsUrl": "/hostedPXT/siminstructions.html",
+    "runUrl": "/hostedPXT/run.html",
+    "docsUrl": "/hostedPXT/docs.html",
+    "multiUrl": "/hostedPXT/multi.html",
+    "asseteditorUrl": "/hostedPXT/asseteditor.html",
+    "skillmapUrl": "/hostedPXT/skillmap.html",
     "isStatic": true
 };
     </script>
     
 <!-- include apptrackingweb.html -->
-<script type="text/javascript" src="/pxtweb.js"></script>
+<script type="text/javascript" src="/hostedPXT/pxtweb.js"></script>
 <!-- end include apptrackingweb.html -->
 
     
@@ -144,7 +144,7 @@
             disableExceptionTracking: true,
             isCookieUseDisabled: !includeCookie,
             isStorageUseDisabled: !includeCookie,
-            url: "/ai.0.js"
+            url: "/hostedPXT/ai.0.js"
         });
         window.appInsights=appInsights;
         appInsights.queue.push(function () {
@@ -162,9 +162,9 @@
 </script>
 <!-- end include apptracking.html -->
 
-    <script type="text/javascript" src="/pxtapp.js"></script>
-    <script type="text/javascript" src="/target.js"></script>
-    <script id="mainscript" type="text/javascript" src="/main.js"></script>
+    <script type="text/javascript" src="/hostedPXT/pxtapp.js"></script>
+    <script type="text/javascript" src="/hostedPXT/target.js"></script>
+    <script id="mainscript" type="text/javascript" src="/hostedPXT/main.js"></script>
     <xml id="blocklyToolboxDefinitionCategory" style="display: none">
         <!-- An empty category is required so that Blockly launches in category mode -->
         <category name="">
@@ -186,24 +186,24 @@
         // this get rewritten to blob URLs with SHAs while uploading to the cloud
         // keep in sync with release.manifest
         window.MonacoPaths = {
-            "vs/loader": "/vs/loader.js",
-            "vs/base/worker/workerMain": "/vs/base/worker/workerMain.js",
-            "vs/basic-languages/bat/bat": "/vs/basic-languages/bat/bat.js",
-            "vs/basic-languages/cpp/cpp": "/vs/basic-languages/cpp/cpp.js",
-            "vs/basic-languages/markdown/markdown": "/vs/basic-languages/markdown/markdown.js",
-            "vs/basic-languages/python/python": "/vs/basic-languages/python/python.js",
-            "vs/editor/editor.main.css": "/vs/editor/editor.main.css",
-            "vs/editor/editor.main": "/vs/editor/editor.main.js",
-            "vs/editor/editor.main.nls": "/vs/editor/editor.main.nls.js",
-            "vs/language/json/jsonMode": "/vs/language/json/jsonMode.js",
-            "vs/language/json/jsonWorker": "/vs/language/json/jsonWorker.js",
-            "lzma/lzma_worker-min.js": "/lzma/lzma_worker-min.js",
-            "smoothie/smoothie_compressed.js": "/smoothie/smoothie_compressed.js",
-            "pxtblockly.js": "/pxtblockly.js",
-            "blockly.css": "/blockly.css",
-            "rtlblockly.css": "/rtlblockly.css",
-            "gifjs/gif.js": "/gifjs/gif.js",
-            "qrcode/qrcode.min.js": "/qrcode/qrcode.min.js"
+            "vs/loader": "/hostedPXT/vs/loader.js",
+            "vs/base/worker/workerMain": "/hostedPXT/vs/base/worker/workerMain.js",
+            "vs/basic-languages/bat/bat": "/hostedPXT/vs/basic-languages/bat/bat.js",
+            "vs/basic-languages/cpp/cpp": "/hostedPXT/vs/basic-languages/cpp/cpp.js",
+            "vs/basic-languages/markdown/markdown": "/hostedPXT/vs/basic-languages/markdown/markdown.js",
+            "vs/basic-languages/python/python": "/hostedPXT/vs/basic-languages/python/python.js",
+            "vs/editor/editor.main.css": "/hostedPXT/vs/editor/editor.main.css",
+            "vs/editor/editor.main": "/hostedPXT/vs/editor/editor.main.js",
+            "vs/editor/editor.main.nls": "/hostedPXT/vs/editor/editor.main.nls.js",
+            "vs/language/json/jsonMode": "/hostedPXT/vs/language/json/jsonMode.js",
+            "vs/language/json/jsonWorker": "/hostedPXT/vs/language/json/jsonWorker.js",
+            "lzma/lzma_worker-min.js": "/hostedPXT/lzma/lzma_worker-min.js",
+            "smoothie/smoothie_compressed.js": "/hostedPXT/smoothie/smoothie_compressed.js",
+            "pxtblockly.js": "/hostedPXT/pxtblockly.js",
+            "blockly.css": "/hostedPXT/blockly.css",
+            "rtlblockly.css": "/hostedPXT/rtlblockly.css",
+            "gifjs/gif.js": "/hostedPXT/gifjs/gif.js",
+            "qrcode/qrcode.min.js": "/hostedPXT/qrcode/qrcode.min.js"
         }
     </script>
 </body>

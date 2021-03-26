@@ -3,47 +3,47 @@
 
     // This line gets patched up by the cloud
     var pxtConfig = {
-    "relprefix": "/",
+    "relprefix": "/hostedPXT/",
     "verprefix": "",
-    "workerjs": "/worker.js",
-    "monacoworkerjs": "/monacoworker.js",
-    "gifworkerjs": "/gifjs/gif.worker.js",
-    "serviceworkerjs": "/serviceworker.js",
+    "workerjs": "/hostedPXT/worker.js",
+    "monacoworkerjs": "/hostedPXT/monacoworker.js",
+    "gifworkerjs": "/hostedPXT/gifjs/gif.worker.js",
+    "serviceworkerjs": "/hostedPXT/serviceworker.js",
     "pxtVersion": "6.8.38",
     "pxtRelId": "",
-    "pxtCdnUrl": "/",
-    "commitCdnUrl": "/",
-    "blobCdnUrl": "/",
-    "cdnUrl": "/",
+    "pxtCdnUrl": "/hostedPXT/",
+    "commitCdnUrl": "/hostedPXT/",
+    "blobCdnUrl": "/hostedPXT/",
+    "cdnUrl": "/hostedPXT/",
     "targetVersion": "0.0.0",
     "targetRelId": "",
     "targetUrl": "",
     "targetId": "adafruit",
-    "simUrl": "/simulator.html",
-    "simserviceworkerUrl": "/simulatorserviceworker.js",
-    "simworkerconfigUrl": "/workerConfig.js",
-    "partsUrl": "/siminstructions.html",
-    "runUrl": "/run.html",
-    "docsUrl": "/docs.html",
-    "multiUrl": "/multi.html",
-    "asseteditorUrl": "/asseteditor.html",
-    "skillmapUrl": "/skillmap.html",
+    "simUrl": "/hostedPXT/simulator.html",
+    "simserviceworkerUrl": "/hostedPXT/simulatorserviceworker.js",
+    "simworkerconfigUrl": "/hostedPXT/workerConfig.js",
+    "partsUrl": "/hostedPXT/siminstructions.html",
+    "runUrl": "/hostedPXT/run.html",
+    "docsUrl": "/hostedPXT/docs.html",
+    "multiUrl": "/hostedPXT/multi.html",
+    "asseteditorUrl": "/hostedPXT/asseteditor.html",
+    "skillmapUrl": "/hostedPXT/skillmap.html",
     "isStatic": true
 };
 
     var scripts = [
-        "/highlight.js/highlight.pack.js",
-        "/bluebird.min.js",
-        "/marked/marked.min.js",
+        "/hostedPXT/highlight.js/highlight.pack.js",
+        "/hostedPXT/bluebird.min.js",
+        "/hostedPXT/marked/marked.min.js",
     ]
 
     if (typeof jQuery == "undefined")
-        scripts.unshift("/jquery.js")
+        scripts.unshift("/hostedPXT/jquery.js")
     if (typeof jQuery == "undefined" || !jQuery.prototype.sidebar)
-        scripts.push("/semantic.js")
+        scripts.push("/hostedPXT/semantic.js")
     if (!window.pxtTargetBundle)
-        scripts.push("/target.js");
-    scripts.push("/pxtembed.js");
+        scripts.push("/hostedPXT/target.js");
+    scripts.push("/hostedPXT/pxtembed.js");
 
     var pxtCallbacks = []
 

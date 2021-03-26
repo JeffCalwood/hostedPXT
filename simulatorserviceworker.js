@@ -9,9 +9,9 @@ function initSimulatorServiceWorker() {
     var simUrls = [
         // This is the URL loaded in the simulator iframe (includes ref)
         "@simUrl@",
-        "/bluebird.min.js",
-        "/pxtsim.js",
-        "/sim.js",
+        "/hostedPXT/bluebird.min.js",
+        "/hostedPXT/pxtsim.js",
+        "/hostedPXT/sim.js",
     ];
     var allFiles = simUrls.map(function (url) { return url.trim(); })
         .filter(function (url) { return !!url && url.indexOf("@") !== 0; });
